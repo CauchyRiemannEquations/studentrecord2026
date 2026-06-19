@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "2026-06-17.seed.v1",
+  "effectiveFrom": "2026-03-01",
+  "defaultBehaviorWhenGradeUnknown": "학년이 드러나지 않으면 1·2학년과 3학년을 나눠 병렬 답변한다.",
+  "disambiguationRequiredTopicIds": [
+    "creative_experience",
+    "volunteer_service",
+    "subject_progress",
+    "subject_progress_grades_1_2",
+    "subject_progress_grade_3",
+    "attendance"
+  ],
+  "cohorts": [
+    {
+      "cohortId": "grades_1_2_2026",
+      "label": "2026학년도 고등학교 1·2학년",
+      "grades": [
+        1,
+        2
+      ],
+      "curriculum": "2022 개정 교육과정",
+      "coreFeatures": [
+        "고교학점제 적용",
+        "학점 단위 기록",
+        "과목출석률 적용",
+        "5등급 체계 질문 빈번",
+        "미이수·대체이수·재이수 설명 필요",
+        "창체는 자율·자치활동, 동아리활동, 진로활동 중심으로 설명"
+      ],
+      "sourceRefs": [
+        {
+          "docId": "official_guidelines_2026_hs",
+          "printedPage": 93
+        },
+        {
+          "docId": "guide_2026_hs",
+          "printedPage": 125
+        },
+        {
+          "docId": "changes_ppt_2026_hs",
+          "slide": 8
+        }
+      ]
+    },
+    {
+      "cohortId": "grade_3_2026",
+      "label": "2026학년도 고등학교 3학년",
+      "grades": [
+        3
+      ],
+      "curriculum": "기존 교육과정(2015 개정 교육과정 기반)",
+      "coreFeatures": [
+        "단위수 중심 기록을 우선 설명",
+        "9등급 체계 질문 빈번",
+        "기존 창체 체계와 봉사활동 영역 설명 필요",
+        "소인수 과목 13명 이하 규칙 설명 필요"
+      ],
+      "sourceRefs": [
+        {
+          "docId": "official_guidelines_2026_hs",
+          "printedPage": 124
+        },
+        {
+          "docId": "guide_2026_hs",
+          "printedPage": 140
+        }
+      ]
+    }
+  ],
+  "routingRules": [
+    {
+      "ruleId": "force_grade_branch_subject_progress",
+      "triggerTopicIds": [
+        "subject_progress"
+      ],
+      "triggerKeywords": [
+        "세특",
+        "교과학습발달상황",
+        "학점",
+        "단위수",
+        "석차등급",
+        "성취도"
+      ],
+      "resolution": "답변을 반드시 1·2학년 / 3학년 두 갈래로 나눈다.",
+      "why": "교과 서식, 평가 체계, 학점·단위수, 석차등급 기준이 다르다."
+    },
+    {
+      "ruleId": "force_grade_branch_creative_experience",
+      "triggerTopicIds": [
+        "creative_experience",
+        "volunteer_service"
+      ],
+      "triggerKeywords": [
+        "창체",
+        "봉사활동",
+        "자율활동",
+        "동아리활동",
+        "진로활동",
+        "헌혈"
+      ],
+      "resolution": "1·2학년과 3학년의 입력 위치와 설명 문구를 분리한다.",
+      "why": "1·2학년은 2022 개정 교육과정 운영 맥락, 3학년은 기존 창체 체계를 따라야 한다."
+    },
+    {
+      "ruleId": "force_grade_branch_attendance_credit",
+      "triggerTopicIds": [
+        "attendance"
+      ],
+      "triggerKeywords": [
+        "과목출석률",
+        "학점 취득",
+        "개근",
+        "수료",
+        "장기결석"
+      ],
+      "resolution": "출결 답변이 학점 취득 또는 과목 단위 출석과 연결되면 1·2학년 / 3학년을 나눠 설명한다.",
+      "why": "2026학년도 1·2학년은 과목출석률이 핵심이고, 3학년은 기존 체계 설명이 우선이다."
+    },
+    {
+      "ruleId": "answer_with_both_branches_if_grade_missing",
+      "triggerTopicIds": [
+        "creative_experience",
+        "volunteer_service",
+        "subject_progress",
+        "attendance"
+      ],
+      "triggerKeywords": [
+        "몇 명 이하",
+        "봉사",
+        "학점",
+        "단위수",
+        "석차등급"
+      ],
+      "resolution": "질문에 학년이 없으면 추가 질문만 던지지 말고 두 학년군 답을 함께 제공한다.",
+      "why": "사이트형 Q&A에서는 즉답성이 중요하고, 사용자도 자기 상황을 비교해 볼 수 있다."
+    }
+  ]
+}

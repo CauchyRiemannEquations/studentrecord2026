@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "2026-06-17.seed.v1",
+  "project": "2026학년도 고등학교 학교생활기록부 기재요령 Q&A 봇",
+  "brainPolicy": {
+    "primaryKnowledgeSource": "brain 폴더의 JSON/JSONL",
+    "rawSourceRole": "원문 PDF/PPT는 최종 근거 확인과 페이지 검증용",
+    "sourcePriority": [
+      "official_guidelines_2026_hs",
+      "guide_2026_hs",
+      "changes_ppt_2026_hs",
+      "training_ppt_2026_hs"
+    ],
+    "conflictResolution": "brain 카드와 원문이 충돌하면 공식 기재요령을 기준으로 brain 데이터를 재검토한다.",
+    "botAnswerRule": "답변 초안은 brain 카드로 만들고, 필요 시 원문 페이지를 다시 찾아 근거를 덧붙인다."
+  },
+  "documents": [
+    {
+      "docId": "official_guidelines_2026_hs",
+      "title": "2026학년도 학교생활기록부 기재요령(고등학교)",
+      "kind": "pdf",
+      "role": "최우선 기준 문서",
+      "priority": 1,
+      "trustLevel": "authoritative",
+      "usedFor": [
+        "현행 기재 기준 확정",
+        "페이지 근거 확인",
+        "규칙 카드 최종 검증"
+      ],
+      "searchPatterns": [
+        "서울특별시교육청 학생역량·혁신교육과_2026 학교생활기록부 기재요령(고등학교).pdf",
+        "*2026*학교생활기록부*기재요령*고등학교*.pdf",
+        "2026 학교생활기록부 기재요령(고).pdf"
+      ],
+      "citationLabel": "공식 기재요령",
+      "pageSystem": {
+        "screenLabel": "PDF 화면상 페이지",
+        "printedLabel": "문서 인쇄 쪽수",
+        "note": "본문 기준으로 대체로 pdf 화면상 페이지 = 인쇄 쪽수 + 6"
+      }
+    },
+    {
+      "docId": "guide_2026_hs",
+      "title": "2026학년도 학교생활기록부 기재 길라잡이(고등학교)",
+      "kind": "pdf",
+      "role": "보조 참고자료 및 Q&A 원천",
+      "priority": 2,
+      "trustLevel": "supporting",
+      "usedFor": [
+        "Q&A 카드 작성",
+        "현장 해석 보조",
+        "최근 변경사항 비교표 보조 확인"
+      ],
+      "searchPatterns": [
+        "2026학년도 학교생활기록부 기재 길라잡이(고등학교).pdf",
+        "*2026*학교생활기록부*기재 길라잡이*고등학교*.pdf"
+      ],
+      "citationLabel": "기재 길라잡이",
+      "pageSystem": {
+        "screenLabel": "PDF 화면상 페이지",
+        "printedLabel": "문서 인쇄 쪽수",
+        "note": "이 파일은 화면상 페이지와 인쇄 쪽수가 거의 일치한다."
+      }
+    },
+    {
+      "docId": "changes_ppt_2026_hs",
+      "title": "2026 학교생활기록부 기재요령 주요 개정사항 안내(고등학교)",
+      "kind": "pptx",
+      "role": "2025 대비 2026 변경사항 추출",
+      "priority": 3,
+      "trustLevel": "supporting",
+      "usedFor": [
+        "변경사항 카탈로그 초안",
+        "전년도 대비 before/after 비교"
+      ],
+      "searchPatterns": [
+        "2026 학교생활기록부 기재요령 주요 개정사항_고등_F_260218.pptx",
+        "*2026*학교생활기록부*주요 개정사항*.pptx"
+      ],
+      "citationLabel": "주요 개정사항 PPT"
+    },
+    {
+      "docId": "training_ppt_2026_hs",
+      "title": "2026 학교생활기록부 연수 자료",
+      "kind": "pptx",
+      "role": "평가·기록 맥락 보조",
+      "priority": 4,
+      "trustLevel": "contextual",
+      "usedFor": [
+        "용어 변화 맥락 파악",
+        "학생평가·기록 연계 설명 보조"
+      ],
+      "searchPatterns": [
+        "2026 학교생활기록부 연수(성북강북교육지원청).pptx",
+        "*2026*학교생활기록부*연수*.pptx"
+      ],
+      "citationLabel": "연수자료 PPT"
+    }
+  ]
+}

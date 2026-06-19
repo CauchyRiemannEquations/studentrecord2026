@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>학교생활기록부 Q&A 봇</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand-card">
+          <p class="eyebrow">서울 고교 학교생활기록부 안내</p>
+          <h1>2026학년도 고등학교<br />학교생활기록부 기재요령 Q&amp;A 봇</h1>
+          <p class="lead">
+            질문을 먼저 해석한 뒤, 공식 기재요령과 기재 길라잡이를 기준으로 답을 정리합니다.
+          </p>
+        </div>
+
+        <section class="panel">
+          <h2>질문 설정</h2>
+          <label class="field">
+            <span>학년 선택</span>
+            <select id="grade-select"></select>
+          </label>
+          <label class="field">
+            <span>항목 선택</span>
+            <select id="topic-select"></select>
+          </label>
+          <label class="field">
+            <span>질문 유형 선택</span>
+            <select id="question-type-select"></select>
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>자주 묻는 질문</h2>
+          <div class="chip-grid" id="preset-questions">
+            <button class="chip" data-question="2026년 변경사항">2026년 변경사항</button>
+            <button class="chip" data-question="2026년에 출결 특기사항 뭐가 바뀜?">출결 특기사항</button>
+            <button class="chip" data-question="1,2학년이랑 3학년 생기부 차이">1·2학년 / 3학년 차이</button>
+            <button class="chip" data-question="졸업에 필요한 학점을 못 채우면 유급인가요?">유급 / 졸업유예</button>
+            <button class="chip" data-question="창체나 행특 누가기록은 교육청 기준으로 똑같이 운영되나요?">누가기록</button>
+            <button class="chip" data-question="세특 문장 하나 써줘">세특 문장 하나 써줘</button>
+          </div>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <section class="question-card">
+          <div class="question-top">
+            <div>
+              <p class="eyebrow">질문 입력</p>
+              <h2>기재 기준과 참고 쪽수를 함께 정리해 드립니다.</h2>
+              <p class="question-helper">
+                답변은 공식 기재요령을 우선 기준으로 정리하고, 필요할 때 기재 길라잡이의 인쇄 쪽수를 함께 붙여 드립니다.
+              </p>
+            </div>
+            <button class="submit-button" id="ask-button">질문하기</button>
+          </div>
+          <label class="field">
+            <span>질문</span>
+            <textarea
+              id="question-input"
+              rows="4"
+              placeholder="예: 2026년에 출결 특기사항 뭐가 바뀜?"
+            ></textarea>
+          </label>
+        </section>
+
+        <section class="answer-layout">
+          <article class="answer-card" id="answer-card">
+            <div class="empty-state" id="empty-state">
+              <p class="eyebrow">준비됨</p>
+              <h2>질문을 입력하면 아래 구조로 답변합니다.</h2>
+              <ul>
+                <li>[결론]</li>
+                <li>[핵심 정리]</li>
+                <li>[학년별 차이]</li>
+                <li>[실무상 주의]</li>
+                <li>[참고 페이지]</li>
+                <li>[근거 보기]</li>
+              </ul>
+            </div>
+            <div class="answer-content hidden" id="answer-content">
+              <section class="answer-overview">
+                <div>
+                  <p class="eyebrow">답변 안내</p>
+                  <h3 id="answer-summary-title">질문에 맞는 기준을 정리했습니다.</h3>
+                  <p id="answer-summary-caption" class="section-caption">
+                    참고 페이지는 모두 인쇄 쪽수 기준으로 표시합니다.
+                  </p>
+                </div>
+                <div class="answer-badges">
+                  <span class="meta-badge">공식 기재요령 우선</span>
+                  <span class="meta-badge">기재 길라잡이 보조</span>
+                  <span class="meta-badge">인쇄 쪽수 기준</span>
+                </div>
+              </section>
+
+              <div class="answer-grid">
+                <div class="answer-main">
+                  <section class="section-block">
+                    <h3 id="heading-conclusion">[결론]</h3>
+                    <p id="section-conclusion"></p>
+                  </section>
+                  <section class="section-block">
+                    <h3 id="heading-core">[핵심 정리]</h3>
+                    <ul id="section-core"></ul>
+                  </section>
+                  <section class="section-block" id="grade-section">
+                    <h3 id="heading-grade">[학년별 차이]</h3>
+                    <ul id="section-grade"></ul>
+                  </section>
+                  <section class="section-block" id="practical-section">
+                    <h3 id="heading-practical">[실무상 주의]</h3>
+                    <ul id="section-practical"></ul>
+                  </section>
+                </div>
+
+                <aside class="reference-rail">
+                  <section class="section-block reference-section">
+                    <div class="section-heading">
+                      <h3 id="heading-references">[참고 페이지]</h3>
+                      <p class="section-caption">답변과 가장 가까운 공식 기준부터 바로 확인할 수 있게 묶어 두었습니다.</p>
+                    </div>
+                    <div class="reference-panels">
+                      <article class="reference-box reference-box-strong">
+                        <h4>공식 기재요령</h4>
+                        <ul class="page-chip-list" id="official-reference-list"></ul>
+                      </article>
+                      <article class="reference-box">
+                        <h4>기재 길라잡이</h4>
+                        <ul class="page-chip-list" id="guide-reference-list"></ul>
+                      </article>
+                    </div>
+                  </section>
+
+                  <details class="section-block evidence-disclosure">
+                    <summary>근거 요약 보기</summary>
+                    <p class="section-caption">답변에 직접 연결되는 기준만 간단히 정리했습니다.</p>
+                    <div id="evidence-list" class="stack"></div>
+                  </details>
+                </aside>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <details class="panel dev-only hidden" id="developer-panel">
+          <summary>개발 확인용</summary>
+          <div class="debug-panel">
+            <div class="debug-group">
+              <h3>사용된 card id</h3>
+              <p><strong>change</strong>: <span id="used-change-cards">-</span></p>
+              <p><strong>rule</strong>: <span id="used-rule-cards">-</span></p>
+              <p><strong>qa</strong>: <span id="used-qa-cards">-</span></p>
+            </div>
+            <div class="debug-group">
+              <h3>답변 판정</h3>
+              <p><strong>answerMode</strong>: <span id="answer-mode">-</span></p>
+              <p><strong>detectedPolicyId</strong>: <span id="debug-policy">-</span></p>
+              <p><strong>detectedTopicIds</strong>: <span id="debug-topics">-</span></p>
+              <p><strong>answerStartsWith</strong>: <span id="debug-answer-start">-</span></p>
+              <p><strong>품질검사</strong>: <span id="debug-quality">-</span></p>
+            </div>
+            <div class="debug-group">
+              <h3>쪽수 수집</h3>
+              <p><strong>공식 기재요령</strong>: <span id="official-pages">-</span></p>
+              <p><strong>기재 길라잡이</strong>: <span id="guide-pages">-</span></p>
+            </div>
+          </div>
+        </details>
+      </main>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

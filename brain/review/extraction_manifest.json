@@ -1,0 +1,18 @@
+{
+  "generatedBy": "scripts/extract_brain_candidates.py",
+  "outputDir": "C:\\Users\\USER\\Documents\\New project 3\\brain\\review",
+  "sourceFiles": {
+    "official_guidelines_2026_hs": "C:\\Users\\USER\\Documents\\에듀파인\\서울특별시교육청 학생역량·혁신교육과_2026 학교생활기록부 기재요령(고등학교).pdf",
+    "guide_2026_hs": "C:\\Users\\USER\\Documents\\에듀파인\\서울특별시교육청 학생역량·혁신교육과_2026학년도 학교생활기록부 기재 길라잡이(중학교, 고등학교)\\2026학년도 학교생활기록부 기재 길라잡이\\2026학년도 학교생활기록부 기재 길라잡이(고등학교).pdf",
+    "changes_ppt_2026_hs": "C:\\Users\\USER\\Downloads\\2026 학교생활기록부 기재요령 주요 개정사항_고등_F_260218.pptx",
+    "training_ppt_2026_hs": "C:\\Users\\USER\\Downloads\\2026 학교생활기록부 연수(성북강북교육지원청).pptx"
+  },
+  "counts": {
+    "totalUnits": 607,
+    "pageOutlineCandidates": 4,
+    "changeCandidates": 45,
+    "ruleCandidates": 189,
+    "qaCandidates": 68,
+    "termTagCandidates": 53
+  }
+}

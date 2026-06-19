@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": "2026-06-17.curated.v3",
+  "tests": [
+    {
+      "testId": "t01",
+      "question": "2026년 변경사항",
+      "expectedTopicIds": [
+        "processing",
+        "attendance",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "change_2026",
+      "mustMention": [
+        "2026 변경사항은 공식 기재요령 기준으로 설명",
+        "학년별 차이가 있는 항목은 분기해서 설명",
+        "AI 관련 유의사항",
+        "누가기록 여부 및 방법은 학교장이 정함",
+        "유급과 졸업유예 구분",
+        "과목출석률",
+        "출결 특기사항 기준 세분화",
+        "글자 수 축소",
+        "창체 영역명 학년별 차이",
+        "교과학습발달상황 1·2학년과 3학년 분리",
+        "지필평가 → 정기시험",
+        "세특 모든 학생 입력 원칙"
+      ],
+      "shouldUseCards": [
+        "chg_2026_001_accumulation_authority",
+        "chg_2026_002_retention_definition",
+        "chg_2026_003_graduation_deferral",
+        "chg_2026_004_subject_attendance_rate",
+        "chg_2026_005_attendance_notes",
+        "chg_2026_009_generative_ai_caution",
+        "chg_2026_015_volunteer_content_limit",
+        "chg_2026_017_behavior_limit",
+        "chg_2026_018_subject_progress_split",
+        "chg_2026_023_regular_exam_term",
+        "chg_2026_026_all_students_subject_notes"
+      ]
+    },
+    {
+      "testId": "t02",
+      "question": "2026년에 출결 특기사항 뭐가 바뀜?",
+      "expectedTopicIds": [
+        "attendance"
+      ],
+      "expectedPolicyId": "change_2026",
+      "mustMention": [
+        "장기결석",
+        "기타결석 1일이라도 입력",
+        "지각·조퇴·결과는 반복적일 때만 사유 입력 가능"
+      ],
+      "shouldUseCards": [
+        "chg_2026_005_attendance_notes",
+        "rule_long_absence_special_note",
+        "rule_tardy_earlyleave_result_note"
+      ]
+    },
+    {
+      "testId": "t03",
+      "question": "1,2학년이랑 3학년 생기부 차이",
+      "expectedTopicIds": [
+        "subject_progress",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "grade_difference",
+      "mustMention": [
+        "1·2학년과 3학년 분리",
+        "학점과 5등급",
+        "단위수와 9등급",
+        "창체 영역명 차이"
+      ],
+      "shouldUseCards": [
+        "chg_2026_018_subject_progress_split",
+        "rule_grade_1_2_credit_5_grade",
+        "rule_grade_3_unit_9_grade",
+        "rule_creative_area_names_by_grade"
+      ]
+    },
+    {
+      "testId": "t04",
+      "question": "졸업에 필요한 학점을 못 채우면 유급인가요?",
+      "expectedTopicIds": [
+        "personal_school_status"
+      ],
+      "expectedPolicyId": "change_2026",
+      "mustMention": [
+        "유급과 졸업유예 구분",
+        "진급 문제인지 졸업 자격 문제인지 구분"
+      ],
+      "shouldUseCards": [
+        "chg_2026_002_retention_definition",
+        "chg_2026_003_graduation_deferral",
+        "rule_retention_vs_graduation_deferral"
+      ]
+    },
+    {
+      "testId": "t05",
+      "question": "창체나 행특 누가기록은 교육청 기준으로 똑같이 운영되나요?",
+      "expectedTopicIds": [
+        "creative_experience",
+        "behavior"
+      ],
+      "expectedPolicyId": "change_2026",
+      "mustMention": [
+        "학교장이 정함",
+        "학교별 방침 확인",
+        "전국 공통으로 단정하면 안 됨"
+      ],
+      "shouldUseCards": [
+        "chg_2026_001_accumulation_authority",
+        "rule_accumulation_decided_by_principal",
+        "qa_accumulation_principal_policy"
+      ]
+    },
+    {
+      "testId": "t06",
+      "question": "수행평가에서 생성형 AI 사용을 허용해도 되나요?",
+      "expectedTopicIds": [
+        "subject_progress"
+      ],
+      "expectedPolicyId": "qa_lookup",
+      "mustMention": [
+        "사전 안내",
+        "공정성과 신뢰도",
+        "교사 직접 관찰"
+      ],
+      "shouldUseCards": [
+        "chg_2026_025_performance_assessment_ai",
+        "rule_performance_assessment_ai_caution",
+        "qa_performance_assessment_ai"
+      ]
+    },
+    {
+      "testId": "t07",
+      "question": "정규교육과정 이외 학교스포츠클럽은 시간과 특기사항도 적나요?",
+      "expectedTopicIds": [
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "동아리명만 입력",
+        "활동시간 미기재",
+        "특기사항 미입력"
+      ],
+      "shouldUseCards": [
+        "chg_2026_013_school_sports_hours_removed",
+        "chg_2026_014_school_sports_special_note_removed",
+        "rule_school_sports_club_name_only"
+      ]
+    },
+    {
+      "testId": "t08",
+      "question": "세특 문장 하나 써줘",
+      "expectedTopicIds": [
+        "processing",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "교사가 직접 관찰한 사실 없이 대신 작성해 줄 수 없다고 안내",
+        "작성 기준과 필요한 사실 정보를 먼저 확인"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_subject_notes_for_all_students",
+        "rule_no_direct_ai_generated_text"
+      ]
+    },
+    {
+      "testId": "t09",
+      "question": "학생이 써 온 세특 문장을 교사가 그대로 붙여 넣어도 되나요?",
+      "expectedTopicIds": [
+        "processing",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "교사가 직접 작성해야 함",
+        "학생 작성 문장을 그대로 입력하면 안 됨"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_no_direct_ai_generated_text"
+      ]
+    },
+    {
+      "testId": "t10",
+      "question": "한자로 세특을 적어도 되나요?",
+      "expectedTopicIds": [
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "한글이 원칙",
+        "부득이한 경우 영문만 가능",
+        "한자 입력 불가"
+      ],
+      "shouldUseCards": [
+        "rule_hangul_default_english_only",
+        "qa_processing_hanja_input"
+      ]
+    },
+    {
+      "testId": "t11",
+      "question": "학교교육계획에 없던 교내상도 학생부 수상경력에 넣을 수 있나요?",
+      "expectedTopicIds": [
+        "awards"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "학교교육계획 반영 여부 확인",
+        "2학기 초 30일 이내 변경계획 공개 여부 확인"
+      ],
+      "shouldUseCards": [
+        "chg_2026_007_award_plan",
+        "rule_awards_must_follow_school_plan",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t12",
+      "question": "물품 기부를 봉사시간으로 바꿔 적을 수 있나요?",
+      "expectedTopicIds": [
+        "volunteer_service"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "단순 기부는 봉사활동으로 인정하지 않음"
+      ],
+      "shouldUseCards": [
+        "rule_volunteer_no_simple_donation",
+        "qa_volunteer_simple_donation"
+      ]
+    },
+    {
+      "testId": "t13",
+      "question": "참고인 조사 출석 때문에 빠진 날은 미인정결석인가요?",
+      "expectedTopicIds": [
+        "attendance"
+      ],
+      "expectedPolicyId": "qa_lookup",
+      "mustMention": [
+        "학교가 출석인정 결석 또는 기타결석으로 판단 가능",
+        "자동으로 미인정결석이라고 단정하지 않음"
+      ],
+      "shouldUseCards": [
+        "qa_attendance_reference_witness_and_juvenile_case"
+      ]
+    },
+    {
+      "testId": "t14",
+      "question": "같은 책을 여러 과목에서 읽으면 독서활동상황에 한 번만 적어야 하나요?",
+      "expectedTopicIds": [
+        "reading"
+      ],
+      "expectedPolicyId": "qa_lookup",
+      "mustMention": [
+        "증빙자료가 다르면 중복 입력 가능"
+      ],
+      "shouldUseCards": [
+        "chg_2026_027_reading_duplication",
+        "rule_reading_same_book_different_evidence",
+        "qa_reading_same_book_duplication"
+      ]
+    },
+    {
+      "testId": "t15",
+      "question": "2026학년도 과목출석률 기준은 어떻게 설명해야 하나요?",
+      "expectedTopicIds": [
+        "attendance",
+        "subject_progress_grades_1_2"
+      ],
+      "expectedPolicyId": "change_2026",
+      "mustMention": [
+        "1학점당 수업량 16회의 3분의 2 이상",
+        "1·2학년 기준",
+        "출석인정 결석 또는 결과는 출석 반영"
+      ],
+      "shouldUseCards": [
+        "chg_2026_004_subject_attendance_rate",
+        "rule_subject_attendance_rate_16_sessions",
+        "qa_subject_attendance_recognized_absence"
+      ]
+    },
+    {
+      "testId": "t16",
+      "question": "예전 학년 세특이 학생끼리 뒤바뀐 경우 정정할 수 있나요?",
+      "expectedTopicIds": [
+        "corrections"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "객관적 증빙자료",
+        "학업성적관리위원회 심의",
+        "입력 주체 과실 확인"
+      ],
+      "shouldUseCards": [
+        "rule_correction_swapped_items_committee",
+        "qa_correction_swapped_descriptive_items"
+      ]
+    },
+    {
+      "testId": "t17",
+      "question": "학생의 단점을 써도 돼?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "단순한 단점 나열은 부적절",
+        "학생의 성장 정도와 발전 가능성",
+        "교육적 관점",
+        "부정적인 행동특성은 구체적 누가기록 권장"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t18",
+      "question": "행특에 학생의 부정적인 행동을 적어도 되나요?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "구체적 관찰 근거",
+        "누가기록",
+        "성장을 지원하는 교육적 관점"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t19",
+      "question": "교외대회 참가 사실을 세특에 적어도 돼?",
+      "expectedTopicIds": [
+        "awards",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "교외대회",
+        "기재 불가",
+        "우회 입력"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "rule_awards_only_in_awards_section",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t20",
+      "question": "자격증 취득 사실을 행특에 적어도 돼?",
+      "expectedTopicIds": [
+        "certificates",
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "자격증",
+        "입력 범위",
+        "우회 입력"
+      ],
+      "shouldUseCards": [
+        "rule_certificate_only_designated_scope",
+        "rule_behavior_excludes_forbidden_content",
+        "qa_certificate_private_license"
+      ]
+    },
+    {
+      "testId": "t21",
+      "question": "부모 직업을 은근히 드러내도 돼?",
+      "expectedTopicIds": [
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "기록해서는 안 되는 내용",
+        "교육활동과 직접 관련된 내용"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t22",
+      "question": "대학명을 진로활동에 적어도 돼?",
+      "expectedTopicIds": [
+        "processing",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "대학명",
+        "기재 유의"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t23",
+      "question": "외부 기관명을 적어도 돼?",
+      "expectedTopicIds": [
+        "processing",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "기관명",
+        "학교 밖 교육기관"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t24",
+      "question": "학생이 쓴 소감문을 근거로 세특 써도 돼?",
+      "expectedTopicIds": [
+        "processing",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "교사가 직접 작성",
+        "학생이 작성한 문장을 그대로 입력하면 안 됨"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation",
+        "rule_no_direct_ai_generated_text"
+      ]
+    },
+    {
+      "testId": "t25",
+      "question": "AI가 다듬어준 문장을 넣어도 돼?",
+      "expectedTopicIds": [
+        "processing",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "AI",
+        "교사가 직접 작성",
+        "그대로 입력하면 안 됨"
+      ],
+      "shouldUseCards": [
+        "rule_no_direct_ai_generated_text",
+        "qa_processing_ai_polish"
+      ]
+    },
+    {
+      "testId": "t26",
+      "question": "행특 글자 수 원문 몇 쪽이야?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "공식 기재요령",
+        "인쇄"
+      ],
+      "shouldUseCards": [
+        "chg_2026_017_behavior_limit",
+        "rule_behavior_300_chars"
+      ]
+    },
+    {
+      "testId": "t27",
+      "question": "봉사활동 입력 방법 어디 봐야 해?",
+      "expectedTopicIds": [
+        "volunteer_service"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "공식 기재요령",
+        "인쇄"
+      ],
+      "shouldUseCards": [
+        "rule_volunteer_curricular_link_grades_1_2",
+        "rule_volunteer_content_50_chars",
+        "qa_volunteer_curricular_grade_1_2"
+      ]
+    },
+    {
+      "testId": "t28",
+      "question": "출결 특기사항 기준 원문 페이지 알려줘.",
+      "expectedTopicIds": [
+        "attendance"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "공식 기재요령",
+        "인쇄"
+      ],
+      "shouldUseCards": [
+        "chg_2026_005_attendance_notes",
+        "rule_long_absence_special_note",
+        "rule_other_absence_one_day_note",
+        "rule_tardy_earlyleave_result_note"
+      ]
+    },
+    {
+      "testId": "t29",
+      "question": "과목출석률은 어디에 나와?",
+      "expectedTopicIds": [
+        "attendance",
+        "subject_progress_grades_1_2"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "공식 기재요령",
+        "55"
+      ],
+      "shouldUseCards": [
+        "chg_2026_004_subject_attendance_rate",
+        "rule_subject_attendance_rate_16_sessions",
+        "qa_subject_attendance_recognized_absence"
+      ]
+    },
+    {
+      "testId": "t30",
+      "question": "1학년 세특이랑 3학년 세특이 뭐가 달라?",
+      "expectedTopicIds": [
+        "subject_progress"
+      ],
+      "expectedPolicyId": "grade_difference",
+      "mustMention": [
+        "1·2학년과 3학년 분리",
+        "학점과 5등급",
+        "단위수와 9등급"
+      ],
+      "shouldUseCards": [
+        "chg_2026_018_subject_progress_split",
+        "rule_grade_1_2_credit_5_grade",
+        "rule_grade_3_unit_9_grade"
+      ]
+    },
+    {
+      "testId": "t31",
+      "question": "2학년 과목출석률 부족하면 어떻게 돼?",
+      "expectedTopicIds": [
+        "attendance",
+        "subject_progress_grades_1_2"
+      ],
+      "expectedPolicyId": "procedure",
+      "mustMention": [
+        "1·2학년 기준",
+        "1학점당 수업량 16회의 3분의 2 이상"
+      ],
+      "shouldUseCards": [
+        "chg_2026_004_subject_attendance_rate",
+        "rule_subject_attendance_rate_16_sessions"
+      ]
+    },
+    {
+      "testId": "t32",
+      "question": "3학년도 과목출석률 적용돼?",
+      "expectedTopicIds": [
+        "attendance",
+        "subject_progress_grade_3"
+      ],
+      "expectedPolicyId": "qa_lookup",
+      "mustMention": [
+        "3학년",
+        "기존 체계"
+      ],
+      "shouldUseCards": [
+        "chg_2026_018_subject_progress_split",
+        "rule_grade_3_unit_9_grade",
+        "rule_subject_attendance_rate_16_sessions"
+      ]
+    },
+    {
+      "testId": "t33",
+      "question": "1학년 봉사활동은 어디에 적어?",
+      "expectedTopicIds": [
+        "volunteer_service",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "procedure",
+      "mustMention": [
+        "1·2학년",
+        "창체"
+      ],
+      "shouldUseCards": [
+        "rule_volunteer_curricular_link_grades_1_2",
+        "qa_volunteer_curricular_grade_1_2"
+      ]
+    },
+    {
+      "testId": "t34",
+      "question": "같은 책을 여러 과목에서 읽으면 독서활동에 또 넣어도 돼?",
+      "expectedTopicIds": [
+        "reading"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "증빙자료가 다르면",
+        "중복 입력 가능"
+      ],
+      "shouldUseCards": [
+        "chg_2026_027_reading_duplication",
+        "rule_reading_same_book_different_evidence",
+        "qa_reading_same_book_duplication"
+      ]
+    },
+    {
+      "testId": "t35",
+      "question": "참고인 조사로 결석하면 미인정이야?",
+      "expectedTopicIds": [
+        "attendance"
+      ],
+      "expectedPolicyId": "qa_lookup",
+      "mustMention": [
+        "출석인정 결석 또는 기타결석",
+        "자동으로 미인정결석이라고 단정하지 않음"
+      ],
+      "shouldUseCards": [
+        "qa_attendance_reference_witness_and_juvenile_case"
+      ]
+    },
+    {
+      "testId": "t36",
+      "question": "작년 세특이 바뀌었으면 정정 가능해?",
+      "expectedTopicIds": [
+        "corrections"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "객관적 증빙자료",
+        "학업성적관리위원회 심의"
+      ],
+      "shouldUseCards": [
+        "rule_correction_swapped_items_committee",
+        "qa_correction_swapped_descriptive_items"
+      ]
+    },
+    {
+      "testId": "t37",
+      "question": "애가 좀 게으른 편인데 행특에 써도 되나?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "교육적 관점",
+        "누가기록"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t38",
+      "question": "수업 태도가 계속 안 좋은데 기록 가능해?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "관찰 근거",
+        "교육적 관점"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t39",
+      "question": "친구들과 갈등이 잦다는 내용을 적어도 되나요?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "낙인",
+        "누가기록"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t40",
+      "question": "책임감이 부족하다는 식으로 써도 돼?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "단순한 단점 나열은 부적절",
+        "교육적 관점"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t41",
+      "question": "부정적인 면도 생기부에 남겨야 하나요?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "조건부 가능",
+        "발전 가능성",
+        "교육적 관점"
+      ],
+      "shouldUseCards": [
+        "rule_behavior_negative_traits_educational_perspective",
+        "qa_behavior_can_record_student_weakness"
+      ]
+    },
+    {
+      "testId": "t42",
+      "question": "외부 대회 나간 걸 세특에 써도 돼?",
+      "expectedTopicIds": [
+        "awards",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "불가",
+        "교외대회",
+        "우회 입력"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "rule_awards_only_in_awards_section",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t43",
+      "question": "교외 공모전 참여 사실을 진로활동에 적어도 되나요?",
+      "expectedTopicIds": [
+        "awards",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "불가",
+        "교외",
+        "기재 불가"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "rule_awards_only_in_awards_section",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t44",
+      "question": "대회 준비 과정을 행특에 녹여 쓰면 괜찮나요?",
+      "expectedTopicIds": [
+        "awards",
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "불가",
+        "우회 입력",
+        "대회 참가 사실"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "rule_awards_only_in_awards_section",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t45",
+      "question": "상은 못 받았고 참가만 했는데 기록 가능해?",
+      "expectedTopicIds": [
+        "awards"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "불가",
+        "참가 사실",
+        "기재 불가"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t46",
+      "question": "외부상 받은 사실을 다른 항목에 쓰면 안 되나요?",
+      "expectedTopicIds": [
+        "awards",
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "불가",
+        "다른 항목",
+        "우회 입력"
+      ],
+      "shouldUseCards": [
+        "rule_no_competition_participation_record",
+        "rule_awards_only_in_awards_section",
+        "qa_awards_competition_participation"
+      ]
+    },
+    {
+      "testId": "t47",
+      "question": "컴활 자격증 딴 걸 세특에 언급해도 돼?",
+      "expectedTopicIds": [
+        "certificates",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 불가",
+        "입력 범위",
+        "우회 입력"
+      ],
+      "shouldUseCards": [
+        "rule_certificate_only_designated_scope",
+        "qa_certificate_private_license"
+      ]
+    },
+    {
+      "testId": "t48",
+      "question": "민간자격증 취득 사실을 행특에 적어도 되나요?",
+      "expectedTopicIds": [
+        "certificates",
+        "behavior"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 불가",
+        "행특",
+        "입력 범위"
+      ],
+      "shouldUseCards": [
+        "rule_certificate_only_designated_scope",
+        "rule_behavior_excludes_forbidden_content",
+        "qa_certificate_private_license"
+      ]
+    },
+    {
+      "testId": "t49",
+      "question": "국제공인 자격증은 학생부에 넣을 수 있나요?",
+      "expectedTopicIds": [
+        "certificates"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "입력 범위",
+        "국가공인",
+        "자격증 항목"
+      ],
+      "shouldUseCards": [
+        "rule_certificate_only_designated_scope",
+        "qa_certificate_private_license"
+      ]
+    },
+    {
+      "testId": "t50",
+      "question": "자격증 준비 과정을 진로활동에 써도 되나요?",
+      "expectedTopicIds": [
+        "certificates",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 불가",
+        "우회 입력",
+        "자격증"
+      ],
+      "shouldUseCards": [
+        "rule_certificate_only_designated_scope",
+        "qa_certificate_private_license"
+      ]
+    },
+    {
+      "testId": "t51",
+      "question": "서울대 캠프 참여라고 써도 돼?",
+      "expectedTopicIds": [
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 그대로 적지 않습니다",
+        "대학명",
+        "직접 드러내는 방식은 피해야"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t52",
+      "question": "특정 대학 이름을 진로활동에 넣어도 되나요?",
+      "expectedTopicIds": [
+        "processing",
+        "creative_experience"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 그대로 적지 않습니다",
+        "대학명",
+        "피해야"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t53",
+      "question": "외부 기관명을 그대로 적어도 돼?",
+      "expectedTopicIds": [
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 그대로 적지 않습니다",
+        "기관명",
+        "일반화"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t54",
+      "question": "기업 이름을 세특에 써도 되나요?",
+      "expectedTopicIds": [
+        "processing",
+        "subject_progress"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 그대로 적지 않습니다",
+        "기업 이름",
+        "기재 유의"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t55",
+      "question": "강사 이름을 적어도 되나요?",
+      "expectedTopicIds": [
+        "processing"
+      ],
+      "expectedPolicyId": "recordability",
+      "mustMention": [
+        "원칙적으로 그대로 적지 않습니다",
+        "강사",
+        "일반화"
+      ],
+      "shouldUseCards": [
+        "rule_teacher_owns_descriptive_items",
+        "rule_input_based_on_direct_observation"
+      ]
+    },
+    {
+      "testId": "t56",
+      "question": "행특 글자 수는 원문 어디야?",
+      "expectedTopicIds": [
+        "behavior"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "p.",
+        "행동특성",
+        "공식 기재요령"
+      ],
+      "shouldUseCards": [
+        "chg_2026_017_behavior_limit",
+        "rule_behavior_300_chars"
+      ]
+    },
+    {
+      "testId": "t57",
+      "question": "출결 특기사항 페이지 알려줘.",
+      "expectedTopicIds": [
+        "attendance"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "p.",
+        "출결 특기사항",
+        "공식 기재요령"
+      ],
+      "shouldUseCards": [
+        "chg_2026_005_attendance_notes",
+        "rule_long_absence_special_note",
+        "qa_subject_attendance_recognized_absence"
+      ]
+    },
+    {
+      "testId": "t58",
+      "question": "과목출석률 몇 쪽 봐야 해?",
+      "expectedTopicIds": [
+        "attendance",
+        "subject_progress_grades_1_2"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "p.",
+        "과목출석률",
+        "공식 기재요령"
+      ],
+      "shouldUseCards": [
+        "chg_2026_004_subject_attendance_rate",
+        "rule_subject_attendance_rate_16_sessions",
+        "qa_subject_attendance_recognized_absence"
+      ]
+    },
+    {
+      "testId": "t59",
+      "question": "봉사활동 입력 방법은 기재요령 어디에 있어?",
+      "expectedTopicIds": [
+        "volunteer_service"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "p.",
+        "봉사활동",
+        "공식 기재요령"
+      ],
+      "shouldUseCards": [
+        "rule_volunteer_curricular_link_grades_1_2",
+        "rule_volunteer_content_50_chars",
+        "qa_volunteer_curricular_grade_1_2"
+      ]
+    },
+    {
+      "testId": "t60",
+      "question": "독서활동 중복 입력은 길라잡이 어디야?",
+      "expectedTopicIds": [
+        "reading"
+      ],
+      "expectedPolicyId": "page_lookup",
+      "mustMention": [
+        "p.",
+        "길라잡이",
+        "독서활동"
+      ],
+      "shouldUseCards": [
+        "chg_2026_027_reading_duplication",
+        "rule_reading_same_book_different_evidence",
+        "qa_reading_same_book_duplication"
+      ]
+    }
+  ]
+}

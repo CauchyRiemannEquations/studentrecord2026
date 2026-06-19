@@ -1,0 +1,557 @@
+{
+  "schemaVersion": "2026-06-17.seed.v1",
+  "note": "주요 토픽은 공식 기재요령의 목차와 길라잡이의 변경사항/Q&A 목차를 함께 반영한다.",
+  "topics": [
+    {
+      "topicId": "processing",
+      "label": "처리요령",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 27,
+          "printedEnd": 31,
+          "pdfStart": 33,
+          "pdfEnd": 37
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 9,
+          "printedEnd": 9,
+          "pdfStart": 9,
+          "pdfEnd": 9
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 92,
+          "printedEnd": 93,
+          "pdfStart": 92,
+          "pdfEnd": 93
+        }
+      ],
+      "keywords": [
+        "처리요령",
+        "한글",
+        "영문",
+        "영어",
+        "한자",
+        "작성 유의사항"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "personal_school_status",
+      "label": "인적·학적사항",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 32,
+          "printedEnd": 46,
+          "pdfStart": 38,
+          "pdfEnd": 52
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 11,
+          "printedEnd": 14,
+          "pdfStart": 11,
+          "pdfEnd": 14
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 94,
+          "printedEnd": 105,
+          "pdfStart": 94,
+          "pdfEnd": 105
+        }
+      ],
+      "keywords": [
+        "학적",
+        "전입",
+        "전출",
+        "재입학",
+        "복학",
+        "외국인등록번호",
+        "국내거소신고번호"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "attendance",
+      "label": "출결상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 47,
+          "printedEnd": 60,
+          "pdfStart": 53,
+          "pdfEnd": 66
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 15,
+          "printedEnd": 23,
+          "pdfStart": 15,
+          "pdfEnd": 23
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 106,
+          "printedEnd": 122,
+          "pdfStart": 106,
+          "pdfEnd": 122
+        }
+      ],
+      "keywords": [
+        "출결",
+        "결석",
+        "지각",
+        "조퇴",
+        "결과",
+        "개근",
+        "장기결석",
+        "과목출석률"
+      ],
+      "gradeSensitive": true
+    },
+    {
+      "topicId": "awards",
+      "label": "수상경력",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 61,
+          "printedEnd": 65,
+          "pdfStart": 67,
+          "pdfEnd": 71
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 24,
+          "printedEnd": 24,
+          "pdfStart": 24,
+          "pdfEnd": 24
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 123,
+          "printedEnd": 123,
+          "pdfStart": 123,
+          "pdfEnd": 123
+        }
+      ],
+      "keywords": [
+        "수상경력",
+        "교내상",
+        "대회",
+        "시상 계획",
+        "수상 실적"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "certificates",
+      "label": "자격증 취득 및 국가직무능력표준 이수상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 66,
+          "printedEnd": 71,
+          "pdfStart": 72,
+          "pdfEnd": 77
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 24,
+          "printedEnd": 25,
+          "pdfStart": 24,
+          "pdfEnd": 25
+        }
+      ],
+      "guideQaPageRanges": [],
+      "keywords": [
+        "자격증",
+        "국가기술자격",
+        "국가자격",
+        "국가공인 민간자격증",
+        "NCS"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "school_violence",
+      "label": "학교폭력 조치상황 관리",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 72,
+          "printedEnd": 76,
+          "pdfStart": 78,
+          "pdfEnd": 82
+        }
+      ],
+      "guideChangePageRanges": [],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 124,
+          "printedEnd": 124,
+          "pdfStart": 124,
+          "pdfEnd": 124
+        }
+      ],
+      "keywords": [
+        "학교폭력",
+        "조치사항",
+        "기재유보",
+        "출석정지",
+        "전학"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "creative_experience",
+      "label": "창의적 체험활동상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 77,
+          "printedEnd": 90,
+          "pdfStart": 83,
+          "pdfEnd": 96
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 26,
+          "printedEnd": 34,
+          "pdfStart": 26,
+          "pdfEnd": 34
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 125,
+          "printedEnd": 138,
+          "pdfStart": 125,
+          "pdfEnd": 138
+        }
+      ],
+      "keywords": [
+        "창체",
+        "창의적 체험활동",
+        "자율·자치활동",
+        "동아리활동",
+        "진로활동",
+        "누가기록"
+      ],
+      "gradeSensitive": true,
+      "childrenTopicIds": [
+        "volunteer_service"
+      ]
+    },
+    {
+      "topicId": "volunteer_service",
+      "label": "봉사활동",
+      "parentTopicId": "creative_experience",
+      "officialPageRanges": [
+        {
+          "printedStart": 87,
+          "printedEnd": 90,
+          "pdfStart": 93,
+          "pdfEnd": 96
+        }
+      ],
+      "guideChangePageRanges": [],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 125,
+          "printedEnd": 138,
+          "pdfStart": 125,
+          "pdfEnd": 138
+        }
+      ],
+      "keywords": [
+        "봉사활동",
+        "봉사활동 실적",
+        "1365",
+        "VMS",
+        "DOVOL",
+        "헌혈"
+      ],
+      "gradeSensitive": true
+    },
+    {
+      "topicId": "daily_life_activity",
+      "label": "일상생활 활동상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 91,
+          "printedEnd": 92,
+          "pdfStart": 97,
+          "pdfEnd": 98
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 35,
+          "printedEnd": 35,
+          "pdfStart": 35,
+          "pdfEnd": 35
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 139,
+          "printedEnd": 139,
+          "pdfStart": 139,
+          "pdfEnd": 139
+        }
+      ],
+      "keywords": [
+        "일상생활 활동상황",
+        "학교폭력 피해학생",
+        "특기사항"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "subject_progress",
+      "label": "교과학습발달상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 93,
+          "printedEnd": 155,
+          "pdfStart": 99,
+          "pdfEnd": 161
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 36,
+          "printedEnd": 67,
+          "pdfStart": 36,
+          "pdfEnd": 67
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 140,
+          "printedEnd": 151,
+          "pdfStart": 140,
+          "pdfEnd": 151
+        }
+      ],
+      "keywords": [
+        "교과학습발달상황",
+        "세특",
+        "과목별 세부능력 및 특기사항",
+        "학점",
+        "단위수",
+        "성취도",
+        "석차등급"
+      ],
+      "gradeSensitive": true,
+      "childrenTopicIds": [
+        "subject_progress_grades_1_2",
+        "subject_progress_grade_3"
+      ]
+    },
+    {
+      "topicId": "subject_progress_grades_1_2",
+      "label": "교과학습발달상황(1·2학년)",
+      "parentTopicId": "subject_progress",
+      "officialPageRanges": [
+        {
+          "printedStart": 93,
+          "printedEnd": 123,
+          "pdfStart": 99,
+          "pdfEnd": 129
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 36,
+          "printedEnd": 67,
+          "pdfStart": 36,
+          "pdfEnd": 67
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 140,
+          "printedEnd": 151,
+          "pdfStart": 140,
+          "pdfEnd": 151
+        }
+      ],
+      "keywords": [
+        "1·2학년",
+        "2022 개정 교육과정",
+        "학점",
+        "5등급",
+        "과목출석률",
+        "미이수",
+        "대체이수",
+        "재이수"
+      ],
+      "gradeSensitive": true
+    },
+    {
+      "topicId": "subject_progress_grade_3",
+      "label": "교과학습발달상황(3학년)",
+      "parentTopicId": "subject_progress",
+      "officialPageRanges": [
+        {
+          "printedStart": 124,
+          "printedEnd": 155,
+          "pdfStart": 130,
+          "pdfEnd": 161
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 36,
+          "printedEnd": 67,
+          "pdfStart": 36,
+          "pdfEnd": 67
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 140,
+          "printedEnd": 151,
+          "pdfStart": 140,
+          "pdfEnd": 151
+        }
+      ],
+      "keywords": [
+        "3학년",
+        "2015 개정 교육과정",
+        "단위수",
+        "9등급",
+        "석차등급"
+      ],
+      "gradeSensitive": true
+    },
+    {
+      "topicId": "reading",
+      "label": "독서활동상황",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 156,
+          "printedEnd": 157,
+          "pdfStart": 162,
+          "pdfEnd": 163
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 68,
+          "printedEnd": 68,
+          "pdfStart": 68,
+          "pdfEnd": 68
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 152,
+          "printedEnd": 153,
+          "pdfStart": 152,
+          "pdfEnd": 153
+        }
+      ],
+      "keywords": [
+        "독서",
+        "독서활동상황",
+        "동일 도서명",
+        "독서 증빙자료"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "behavior",
+      "label": "행동특성 및 종합의견",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 158,
+          "printedEnd": 159,
+          "pdfStart": 164,
+          "pdfEnd": 165
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 69,
+          "printedEnd": 69,
+          "pdfStart": 69,
+          "pdfEnd": 69
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 154,
+          "printedEnd": 155,
+          "pdfStart": 154,
+          "pdfEnd": 155
+        }
+      ],
+      "keywords": [
+        "행특",
+        "행동특성",
+        "종합의견",
+        "누가기록",
+        "부정적 행동특성"
+      ],
+      "gradeSensitive": false
+    },
+    {
+      "topicId": "corrections",
+      "label": "자료의 정정",
+      "parentTopicId": null,
+      "officialPageRanges": [
+        {
+          "printedStart": 165,
+          "printedEnd": 171,
+          "pdfStart": 171,
+          "pdfEnd": 177
+        }
+      ],
+      "guideChangePageRanges": [
+        {
+          "printedStart": 70,
+          "printedEnd": 71,
+          "pdfStart": 70,
+          "pdfEnd": 71
+        }
+      ],
+      "guideQaPageRanges": [
+        {
+          "printedStart": 156,
+          "printedEnd": 159,
+          "pdfStart": 156,
+          "pdfEnd": 159
+        }
+      ],
+      "keywords": [
+        "정정",
+        "정정대장",
+        "증빙자료",
+        "학업성적관리위원회",
+        "과실"
+      ],
+      "gradeSensitive": false
+    }
+  ]
+}

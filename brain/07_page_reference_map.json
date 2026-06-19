@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "2026-06-17.seed.v1",
+  "documents": {
+    "official_guidelines_2026_hs": {
+      "title": "2026학년도 학교생활기록부 기재요령(고등학교)",
+      "totalPdfPages": 223,
+      "pageSystems": {
+        "pdfScreenPage": "PDF 뷰어 화면상 페이지 번호",
+        "printedPage": "본문에 인쇄된 쪽수"
+      },
+      "pageOffsetRule": {
+        "formula": "대체로 pdfScreenPage = printedPage + 6",
+        "confidence": "medium",
+        "note": "본문 시작 이후 주요 항목에서 확인한 경험칙이며, 앞표지·목차·부록은 개별 확인이 필요하다."
+      },
+      "topicRanges": [
+        {
+          "topicId": "processing",
+          "printedStart": 27,
+          "printedEnd": 31,
+          "pdfStart": 33,
+          "pdfEnd": 37
+        },
+        {
+          "topicId": "personal_school_status",
+          "printedStart": 32,
+          "printedEnd": 46,
+          "pdfStart": 38,
+          "pdfEnd": 52
+        },
+        {
+          "topicId": "attendance",
+          "printedStart": 47,
+          "printedEnd": 60,
+          "pdfStart": 53,
+          "pdfEnd": 66
+        },
+        {
+          "topicId": "awards",
+          "printedStart": 61,
+          "printedEnd": 65,
+          "pdfStart": 67,
+          "pdfEnd": 71
+        },
+        {
+          "topicId": "certificates",
+          "printedStart": 66,
+          "printedEnd": 71,
+          "pdfStart": 72,
+          "pdfEnd": 77
+        },
+        {
+          "topicId": "school_violence",
+          "printedStart": 72,
+          "printedEnd": 76,
+          "pdfStart": 78,
+          "pdfEnd": 82
+        },
+        {
+          "topicId": "creative_experience",
+          "printedStart": 77,
+          "printedEnd": 90,
+          "pdfStart": 83,
+          "pdfEnd": 96
+        },
+        {
+          "topicId": "volunteer_service",
+          "printedStart": 87,
+          "printedEnd": 90,
+          "pdfStart": 93,
+          "pdfEnd": 96
+        },
+        {
+          "topicId": "daily_life_activity",
+          "printedStart": 91,
+          "printedEnd": 92,
+          "pdfStart": 97,
+          "pdfEnd": 98
+        },
+        {
+          "topicId": "subject_progress_grades_1_2",
+          "printedStart": 93,
+          "printedEnd": 123,
+          "pdfStart": 99,
+          "pdfEnd": 129
+        },
+        {
+          "topicId": "subject_progress_grade_3",
+          "printedStart": 124,
+          "printedEnd": 155,
+          "pdfStart": 130,
+          "pdfEnd": 161
+        },
+        {
+          "topicId": "reading",
+          "printedStart": 156,
+          "printedEnd": 157,
+          "pdfStart": 162,
+          "pdfEnd": 163
+        },
+        {
+          "topicId": "behavior",
+          "printedStart": 158,
+          "printedEnd": 159,
+          "pdfStart": 164,
+          "pdfEnd": 165
+        },
+        {
+          "topicId": "corrections",
+          "printedStart": 165,
+          "printedEnd": 171,
+          "pdfStart": 171,
+          "pdfEnd": 177
+        }
+      ]
+    },
+    "guide_2026_hs": {
+      "title": "2026학년도 학교생활기록부 기재 길라잡이(고등학교)",
+      "totalPdfPages": 159,
+      "pageSystems": {
+        "pdfScreenPage": "PDF 뷰어 화면상 페이지 번호",
+        "printedPage": "본문에 인쇄된 쪽수"
+      },
+      "pageOffsetRule": {
+        "formula": "pdfScreenPage = printedPage",
+        "confidence": "high",
+        "note": "점검한 주요 페이지에서 화면상 페이지와 인쇄 쪽수가 일치했다."
+      },
+      "topicRanges": [
+        {
+          "topicId": "processing",
+          "section": "changes",
+          "printedStart": 9,
+          "printedEnd": 9,
+          "pdfStart": 9,
+          "pdfEnd": 9
+        },
+        {
+          "topicId": "personal_school_status",
+          "section": "changes",
+          "printedStart": 11,
+          "printedEnd": 14,
+          "pdfStart": 11,
+          "pdfEnd": 14
+        },
+        {
+          "topicId": "attendance",
+          "section": "changes",
+          "printedStart": 15,
+          "printedEnd": 23,
+          "pdfStart": 15,
+          "pdfEnd": 23
+        },
+        {
+          "topicId": "awards",
+          "section": "changes",
+          "printedStart": 24,
+          "printedEnd": 24,
+          "pdfStart": 24,
+          "pdfEnd": 24
+        },
+        {
+          "topicId": "certificates",
+          "section": "changes",
+          "printedStart": 24,
+          "printedEnd": 25,
+          "pdfStart": 24,
+          "pdfEnd": 25
+        },
+        {
+          "topicId": "creative_experience",
+          "section": "changes",
+          "printedStart": 26,
+          "printedEnd": 34,
+          "pdfStart": 26,
+          "pdfEnd": 34
+        },
+        {
+          "topicId": "daily_life_activity",
+          "section": "changes",
+          "printedStart": 35,
+          "printedEnd": 35,
+          "pdfStart": 35,
+          "pdfEnd": 35
+        },
+        {
+          "topicId": "subject_progress",
+          "section": "changes",
+          "printedStart": 36,
+          "printedEnd": 67,
+          "pdfStart": 36,
+          "pdfEnd": 67
+        },
+        {
+          "topicId": "reading",
+          "section": "changes",
+          "printedStart": 68,
+          "printedEnd": 68,
+          "pdfStart": 68,
+          "pdfEnd": 68
+        },
+        {
+          "topicId": "behavior",
+          "section": "changes",
+          "printedStart": 69,
+          "printedEnd": 69,
+          "pdfStart": 69,
+          "pdfEnd": 69
+        },
+        {
+          "topicId": "corrections",
+          "section": "changes",
+          "printedStart": 70,
+          "printedEnd": 71,
+          "pdfStart": 70,
+          "pdfEnd": 71
+        },
+        {
+          "topicId": "processing",
+          "section": "qa",
+          "printedStart": 92,
+          "printedEnd": 93,
+          "pdfStart": 92,
+          "pdfEnd": 93
+        },
+        {
+          "topicId": "personal_school_status",
+          "section": "qa",
+          "printedStart": 94,
+          "printedEnd": 105,
+          "pdfStart": 94,
+          "pdfEnd": 105
+        },
+        {
+          "topicId": "attendance",
+          "section": "qa",
+          "printedStart": 106,
+          "printedEnd": 122,
+          "pdfStart": 106,
+          "pdfEnd": 122
+        },
+        {
+          "topicId": "awards",
+          "section": "qa",
+          "printedStart": 123,
+          "printedEnd": 123,
+          "pdfStart": 123,
+          "pdfEnd": 123
+        },
+        {
+          "topicId": "school_violence",
+          "section": "qa",
+          "printedStart": 124,
+          "printedEnd": 124,
+          "pdfStart": 124,
+          "pdfEnd": 124
+        },
+        {
+          "topicId": "creative_experience",
+          "section": "qa",
+          "printedStart": 125,
+          "printedEnd": 138,
+          "pdfStart": 125,
+          "pdfEnd": 138
+        },
+        {
+          "topicId": "daily_life_activity",
+          "section": "qa",
+          "printedStart": 139,
+          "printedEnd": 139,
+          "pdfStart": 139,
+          "pdfEnd": 139
+        },
+        {
+          "topicId": "subject_progress",
+          "section": "qa",
+          "printedStart": 140,
+          "printedEnd": 151,
+          "pdfStart": 140,
+          "pdfEnd": 151
+        },
+        {
+          "topicId": "reading",
+          "section": "qa",
+          "printedStart": 152,
+          "printedEnd": 153,
+          "pdfStart": 152,
+          "pdfEnd": 153
+        },
+        {
+          "topicId": "behavior",
+          "section": "qa",
+          "printedStart": 154,
+          "printedEnd": 155,
+          "pdfStart": 154,
+          "pdfEnd": 155
+        },
+        {
+          "topicId": "corrections",
+          "section": "qa",
+          "printedStart": 156,
+          "printedEnd": 159,
+          "pdfStart": 156,
+          "pdfEnd": 159
+        }
+      ]
+    }
+  }
+}

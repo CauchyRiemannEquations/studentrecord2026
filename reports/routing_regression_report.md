@@ -1,0 +1,2086 @@
+# Routing Regression Report
+
+- generatedAt: 2026-06-18T12:03:19
+- existingRegressionPassed: 36/36
+- paraphrasePassed: 24/24
+- overallPassed: 60/60
+- failedCount: 0
+
+## Hardcoding Audit
+
+- hardcodingSuspected: False
+- exactQuestionHitCount: 0
+- bannedPatternHitCount: 0
+- dormantAnchorPlaceholder: True
+
+## Page Reference Validation
+
+- passed: 60
+- failed: 0
+
+## Test Details
+
+### t01 2026년 변경사항
+
+- detectedPolicyId: change_2026
+- detectedTopicIds: ["processing", "attendance", "subject_progress"]
+- normalizedQuery: `2026년 변경사항`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_004_subject_attendance_rate", "chg_2026_005_attendance_notes", "chg_2026_006_perfect_attendance", "chg_2026_009_generative_ai_caution", "chg_2026_018_subject_progress_split", "chg_2026_021_completion_retake_markers", "chg_2026_025_performance_assessment_ai", "chg_2026_026_all_students_subject_notes", "chg_2026_010_storage_media_definition", "chg_2026_011_english_examples_ai", "chg_2026_022_online_content_remark"]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_no_direct_ai_generated_text", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_hanja_input", "qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "official_guidelines_2026_hs", "printedPage": "59", "pdfPage": "65"}, {"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93~155", "pdfPage": "99~161"}, {"docId": "official_guidelines_2026_hs", "printedPage": "94", "pdfPage": "100"}, {"docId": "official_guidelines_2026_hs", "printedPage": "101, 132", "pdfPage": "107, 138"}, {"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "official_guidelines_2026_hs", "printedPage": "26", "pdfPage": "32"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "94, 97", "pdfPage": "100, 103"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}, {"docId": "guide_2026_hs", "printedPage": "22", "pdfPage": "22"}, {"docId": "guide_2026_hs", "printedPage": "52~67", "pdfPage": "52~67"}, {"docId": "guide_2026_hs", "printedPage": "57~63", "pdfPage": "57~63"}, {"docId": "guide_2026_hs", "printedPage": "63", "pdfPage": "63"}, {"docId": "guide_2026_hs", "printedPage": "9", "pdfPage": "9"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}, {"docId": "guide_2026_hs", "printedPage": "60~61", "pdfPage": "60~61"}, {"docId": "guide_2026_hs", "printedPage": "92", "pdfPage": "92"}]`
+- answerFirstLine: 2026 변경사항은 공식 기재요령 기준으로 설명해야 하며, 학년별 차이가 있는 항목은 분기해서 설명해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026 변경사항은 공식 기재요령 기준으로 설명해야 하며, 학년별 차이가 있는 항목은 분기해서 설명해야 합니다.
+
+[핵심 정리]
+- 생성형 AI 관련 유의사항이 추가되어, 학생 작성 문장이나 AI 생성 문장을 검토 없이 그대로 입력하면 안 됩니다.
+- 누가기록 여부 및 방법은 학교장이 정하며, 적용 대상은 창체, 일상생활 활동상황, 행동특성 및 종합의견입니다.
+- 유급은 진급 불가 개념으로 정리되고, 졸업 학점 미충족은 졸업유예로 별도 구분됩니다.
+- 1·2학년 과목출석률은 1학점당 수업량 16회의 3분의 2 이상 출석 기준으로 관리합니다.
+- 출결 특기사항은 장기결석 사유 입력, 기타결석 1일 이상 입력, 반복적인 지각·조퇴·결과 사유 입력 가능으로 세분화되었습니다.
+- 글자 수는 봉사활동 실적 활동내용 50자, 진로활동 특기사항 500자, 행동특성 및 종합의견 300자로 줄었습니다.
+- 창체는 1·2학년과 3학년의 영역명과 운영 체계를 나눠 설명해야 합니다.
+- 교과학습발달상황은 1·2학년 학점·5등급 체계와 3학년 단위수·9등급 체계로 분리됩니다.
+- 지필평가라는 표현은 정기시험으로 정비되었습니다.
+- 세특은 모든 학생 입력이 원칙이며, 부득이한 경우에만 심의를 거쳐 '특이사항 없음.' 입력이 가능합니다.
+
+[학년별 차이]
+- 1·2학년은 2022 개정 교육과정, 학점, 과목출석률, 5등급, 미이수·대체이수·재이수 체계를 봅니다.
+- 3학년은 기존 교육과정, 단위수, 9등급, 기존 창체 체계를 유지합니다.
+
+[실무상 주의]
+- 학교장이 정하는 사항은 전국 공통 기준처럼 단정하면 안 됩니다.
+- 교과와 창체처럼 학년 차이가 큰 항목은 반드시 학년을 나눠 답해야 합니다.
+- 최종 업무 처리 전에는 공식 기재요령 인쇄 쪽수 기준으로 다시 확인해야 합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 58
+- 공식 기재요령: 인쇄 59
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 93~155
+- 공식 기재요령: 인쇄 94
+- 공식 기재요령: 인쇄 101, 132
+- 공식 기재요령: 인쇄 95, 126
+- 공식 기재요령: 인쇄 26
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 94, 97
+- 공식 기재요령: 인쇄 27
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 21
+- 기재 길라잡이: 인쇄 22
+- 기재 길라잡이: 인쇄 52~67
+- 기재 길라잡이: 인쇄 57~63
+- 기재 길라잡이: 인쇄 63
+- 기재 길라잡이: 인쇄 9
+- 기재 길라잡이: 인쇄 10
+- 기재 길라잡이: 인쇄 60~61
+- 기재 길라잡이: 인쇄 92
+```
+
+### t02 2026년에 출결 특기사항 뭐가 바뀜?
+
+- detectedPolicyId: change_2026
+- detectedTopicIds: ["attendance", "corrections"]
+- normalizedQuery: `2026년에 출결상황 특기사항 뭐가 바뀜?`
+- matchedAliases: `[{"alias": "출결", "canonicalTerm": "출결상황", "topicIds": ["attendance"]}]`
+- usedChangeCards: `["chg_2026_005_attendance_notes", "chg_2026_004_subject_attendance_rate", "chg_2026_006_perfect_attendance", "chg_2026_029_correction_evidence", "chg_2026_028_preservation_reorganization", "chg_2026_014_school_sports_special_note_removed", "chg_2026_026_all_students_subject_notes", "chg_2026_016_career_note_limit", "chg_2026_001_accumulation_authority", "chg_2026_002_retention_definition", "chg_2026_003_graduation_deferral"]`
+- usedRuleCards: `["rule_long_absence_special_note", "rule_other_absence_one_day_note", "rule_tardy_earlyleave_result_note"]`
+- usedQaCards: `["qa_correction_swapped_descriptive_items", "qa_subject_attendance_recognized_absence"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "59", "pdfPage": "65"}, {"docId": "official_guidelines_2026_hs", "printedPage": "165~166", "pdfPage": "171~172"}, {"docId": "official_guidelines_2026_hs", "printedPage": "163", "pdfPage": "169"}, {"docId": "official_guidelines_2026_hs", "printedPage": "84~85", "pdfPage": "90~91"}, {"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "34", "pdfPage": "40"}, {"docId": "official_guidelines_2026_hs", "printedPage": "35", "pdfPage": "41"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "22", "pdfPage": "22"}, {"docId": "guide_2026_hs", "printedPage": "71~72", "pdfPage": "71~72"}, {"docId": "guide_2026_hs", "printedPage": "70~71", "pdfPage": "70~71"}, {"docId": "guide_2026_hs", "printedPage": "63", "pdfPage": "63"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}, {"docId": "guide_2026_hs", "printedPage": "12~13", "pdfPage": "12~13"}, {"docId": "guide_2026_hs", "printedPage": "156", "pdfPage": "156"}]`
+- answerFirstLine: 2026학년도에는 출결 특기사항 입력 기준이 장기결석, 기타결석, 반복적인 지각·조퇴·결과 중심으로 더 세분화되었습니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026학년도에는 출결 특기사항 입력 기준이 장기결석, 기타결석, 반복적인 지각·조퇴·결과 중심으로 더 세분화되었습니다.
+
+[핵심 정리]
+- 장기결석은 결석 종류별 사유를 입력하고, 학교장이 정한 기준에 따라 운영합니다.
+- 기타결석은 1일이라도 입력합니다.
+- 지각·조퇴·결과는 원칙적으로 입력하지 않되, 반복적이거나 잦은 경우에만 사유를 입력할 수 있습니다.
+- 출석인정 결석은 특기사항에 사유를 입력하지 않습니다.
+- 개근 입력은 전입·재입학·특수교육대상자 등 예외 기준이 더 구체화되었습니다.
+
+[학년별 차이]
+- 과목출석률은 1·2학년 기준으로, 1학점당 수업량 16회의 3분의 2 이상 출석 기준을 함께 설명해야 합니다.
+
+[실무상 주의]
+- 학교장이 정하는 장기결석 기준과 학업성적관리위원회 심의 필요 여부를 같이 확인해야 합니다.
+- 참고인 조사 출석처럼 판단이 필요한 사례는 자동으로 미인정결석이라고 단정하지 말고 학교 기준과 증빙을 함께 확인해야 합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 58
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 59
+- 공식 기재요령: 인쇄 165~166
+- 공식 기재요령: 인쇄 163
+- 공식 기재요령: 인쇄 84~85
+- 공식 기재요령: 인쇄 95, 126
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 34
+- 공식 기재요령: 인쇄 35
+- 기재 길라잡이: 인쇄 21
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 22
+- 기재 길라잡이: 인쇄 71~72
+- 기재 길라잡이: 인쇄 70~71
+- 기재 길라잡이: 인쇄 63
+- 기재 길라잡이: 인쇄 10
+- 기재 길라잡이: 인쇄 12~13
+- 기재 길라잡이: 인쇄 156
+```
+
+### t03 1,2학년이랑 3학년 생기부 차이
+
+- detectedPolicyId: grade_difference
+- detectedTopicIds: ["subject_progress", "creative_experience", "subject_progress_grades_1_2"]
+- normalizedQuery: `1,2학년이랑 3학년 학교생활기록부 차이`
+- matchedAliases: `[{"alias": "생기부", "canonicalTerm": "학교생활기록부", "topicIds": []}]`
+- usedChangeCards: `["chg_2026_018_subject_progress_split", "chg_2026_012_creative_area_split"]`
+- usedRuleCards: `["rule_grade_1_2_credit_5_grade", "rule_grade_3_unit_9_grade", "rule_creative_area_names_by_grade"]`
+- usedQaCards: `["qa_creative_area_difference_by_grade", "qa_subject_small_class_rank_rule"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "93~155", "pdfPage": "99~161"}, {"docId": "official_guidelines_2026_hs", "printedPage": "77", "pdfPage": "83"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "official_guidelines_2026_hs", "printedPage": "124", "pdfPage": "130"}, {"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "guide_2026_hs", "printedPage": "52~67", "pdfPage": "52~67"}, {"docId": "guide_2026_hs", "printedPage": "26~29", "pdfPage": "26~29"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}, {"docId": "guide_2026_hs", "printedPage": "140", "pdfPage": "140"}]`
+- answerFirstLine: 2026학년도 고등학교 학교생활기록부는 1·2학년과 3학년을 같은 기준으로 보면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026학년도 고등학교 학교생활기록부는 1·2학년과 3학년을 같은 기준으로 보면 안 됩니다.
+
+[핵심 정리]
+- 1·2학년은 2022 개정 교육과정과 고교학점제 기준을 적용합니다.
+- 3학년은 기존 교육과정과 기존 평가 체계를 유지합니다.
+
+[학년별 차이]
+- 1·2학년: 학점과 5등급 체계, 과목출석률, 성취도 및 성취도별 분포비율 체계를 적용합니다.
+- 3학년: 단위수와 9등급 체계를 유지합니다.
+- 1·2학년: 창체는 자율·자치활동, 동아리활동, 진로활동 중심으로 보고 창체 영역명 차이를 함께 설명해야 합니다.
+- 3학년: 창체는 기존 4개 영역 체계를 유지합니다.
+
+[실무상 주의]
+- 1·2학년 교과학습발달상황은 학점, 5등급, 성취도와 성취도별 분포비율을 기준으로 본다.
+- 3학년 교과학습발달상황은 단위수와 9등급 체계를 유지한다.
+- 창의적 체험활동 영역명은 1·2학년과 3학년이 다르다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 93~155
+- 공식 기재요령: 인쇄 77
+- 공식 기재요령: 인쇄 93
+- 공식 기재요령: 인쇄 124
+- 공식 기재요령: 인쇄 95, 126
+- 기재 길라잡이: 인쇄 52~67
+- 기재 길라잡이: 인쇄 26~29
+- 기재 길라잡이: 인쇄 52~53
+- 기재 길라잡이: 인쇄 140
+```
+
+### t04 졸업에 필요한 학점을 못 채우면 유급인가요?
+
+- detectedPolicyId: change_2026
+- detectedTopicIds: ["personal_school_status", "subject_progress", "subject_progress_grades_1_2"]
+- normalizedQuery: `졸업에 필요한 학점을 못 채우면 유급인가요?`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_002_retention_definition", "chg_2026_003_graduation_deferral"]`
+- usedRuleCards: `["rule_retention_vs_graduation_deferral"]`
+- usedQaCards: `["qa_retention_vs_graduation_deferral"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "34", "pdfPage": "40"}, {"docId": "official_guidelines_2026_hs", "printedPage": "35", "pdfPage": "41"}, {"docId": "official_guidelines_2026_hs", "printedPage": "34~35", "pdfPage": "40~41"}, {"docId": "guide_2026_hs", "printedPage": "12~13", "pdfPage": "12~13"}, {"docId": "guide_2026_hs", "printedPage": "11~13", "pdfPage": "11~13"}]`
+- answerFirstLine: 아닙니다. 졸업에 필요한 학점을 못 채운 경우를 곧바로 유급이라고 보면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+아닙니다. 졸업에 필요한 학점을 못 채운 경우를 곧바로 유급이라고 보면 안 됩니다.
+
+[핵심 정리]
+- 유급과 졸업유예를 구분해서 설명해야 합니다.
+- 유급은 해당 학년 교육과정을 마치지 못해 상급 학년으로 진급하지 못하는 경우입니다.
+- 졸업유예는 출석일수는 충족했지만 졸업에 필요한 학점을 모두 취득하지 못해 졸업 자격을 얻지 못한 경우입니다.
+- 즉 진급 문제인지, 졸업 자격 문제인지부터 나눠서 봐야 합니다.
+
+[실무상 주의]
+- 진급 문제인지 졸업 자격 문제인지 구분해서 답해야 합니다.
+- 유급은 해당 학년 교육과정을 마치지 못해 상급 학년으로 진급하지 못하는 경우입니다. 졸업유예는 출석일수는 충족했지만 졸업에 필요한 학점을 모두 취득하지 못해 졸업 자격을 얻지 못한 경우입니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 34
+- 공식 기재요령: 인쇄 35
+- 공식 기재요령: 인쇄 34~35
+- 기재 길라잡이: 인쇄 12~13
+- 기재 길라잡이: 인쇄 11~13
+```
+
+### t05 창체나 행특 누가기록은 교육청 기준으로 똑같이 운영되나요?
+
+- detectedPolicyId: change_2026
+- detectedTopicIds: ["behavior", "creative_experience"]
+- normalizedQuery: `창의적 체험활동상황나 행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견 누가기록은 교육청 기준으로 똑같이 운영되나요?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "창체", "canonicalTerm": "창의적 체험활동상황", "topicIds": ["creative_experience"]}]`
+- usedChangeCards: `["chg_2026_001_accumulation_authority"]`
+- usedRuleCards: `["rule_accumulation_decided_by_principal"]`
+- usedQaCards: `["qa_accumulation_principal_policy"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}, {"docId": "guide_2026_hs", "printedPage": "93", "pdfPage": "93"}]`
+- answerFirstLine: 아닙니다. 현재는 교육청 공통 기준으로 똑같이 운영한다고 단정할 수 없습니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+아닙니다. 현재는 교육청 공통 기준으로 똑같이 운영한다고 단정할 수 없습니다.
+
+[핵심 정리]
+- 창체, 일상생활 활동상황, 행동특성 및 종합의견의 누가기록 여부 및 방법은 학교장이 정합니다.
+- 같은 교육청 안에서도 학교별 방침이 다를 수 있으므로 학교 운영 기준 확인이 필요합니다.
+
+[실무상 주의]
+- 전국 공통 기준이나 교육청 공통 기준처럼 단정하면 안 됩니다.
+- 학교마다 다를 수 있습니다. 누가기록 여부와 방법은 학교장이 정하므로, 해당 학교의 운영 방침을 먼저 확인해야 합니다. 다만 누가기록은 보조 자료이므로, 입력 주체가 직접 관찰한 학생 특성은 누가기록에 없더라도 입력할 수 있습니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 158
+- 기재 길라잡이: 인쇄 10
+- 기재 길라잡이: 인쇄 93
+```
+
+### t06 수행평가에서 생성형 AI 사용을 허용해도 되나요?
+
+- detectedPolicyId: qa_lookup
+- detectedTopicIds: ["processing", "subject_progress"]
+- normalizedQuery: `수행평가에서 생성형 AI 사용을 허용해도 되나요?`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_025_performance_assessment_ai"]`
+- usedRuleCards: `["rule_performance_assessment_ai_caution", "rule_teacher_owns_descriptive_items"]`
+- usedQaCards: `["qa_performance_assessment_ai"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "101, 132", "pdfPage": "107, 138"}, {"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 조건부 가능입니다. 수행평가에서 생성형 AI 활용을 무조건 허용된다고 답하면 안 되며, 사전 안내와 공정성·신뢰도 관리가 먼저입니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+조건부 가능입니다. 수행평가에서 생성형 AI 활용을 무조건 허용된다고 답하면 안 되며, 사전 안내와 공정성·신뢰도 관리가 먼저입니다.
+
+[핵심 정리]
+- 평가 기준, AI 활용 가능 범위, 제출 방식은 사전에 안내해야 합니다.
+- 과제형 수행평가나 암기식 수행평가는 지양하고, 공정성과 신뢰도를 해치지 않도록 운영해야 합니다.
+- 최종 평가는 교사 직접 관찰과 평가를 바탕으로 해야 합니다.
+
+[실무상 주의]
+- AI 산출물을 학생의 실제 수행처럼 그대로 인정하면 안 됩니다.
+- 서술형 입력은 교사의 직접 관찰과 검토 책임이 남습니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 101, 132
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t07 정규교육과정 이외 학교스포츠클럽은 시간과 특기사항도 적나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["creative_experience"]
+- normalizedQuery: `정규교육과정 이외 학교스포츠클럽은 시간과 특기사항도 적나요?`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_013_school_sports_hours_removed", "chg_2026_014_school_sports_special_note_removed"]`
+- usedRuleCards: `["rule_school_sports_club_name_only", "rule_no_special_note_for_outside_curriculum_sports"]`
+- usedQaCards: `["qa_school_sports_club_record"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "84~85", "pdfPage": "90~91"}]`
+- answerFirstLine: 불가합니다. 정규교육과정 이외 학교스포츠클럽은 활동시간이나 특기사항을 적지 않고 동아리명만 입력합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 정규교육과정 이외 학교스포츠클럽은 활동시간이나 특기사항을 적지 않고 동아리명만 입력합니다.
+
+[이유]
+- 동아리명만 입력합니다.
+- 활동시간 미기재가 원칙입니다.
+- 특기사항 미입력으로 처리합니다.
+
+[주의]
+- 학교장 기준에 따른 누가기록 보조 자료와 학생부 입력 기준을 혼동하면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 84~85
+```
+
+### t08 세특 문장 하나 써줘
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress"]
+- normalizedQuery: `세부능력 및 특기사항 문장 하나 써줘`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_subject_notes_for_all_students", "rule_no_direct_ai_generated_text"]`
+- usedQaCards: `["qa_processing_ai_polish", "qa_subject_special_none"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}, {"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "guide_2026_hs", "printedPage": "63", "pdfPage": "63"}]`
+- answerFirstLine: 자료상 확인 불가입니다. 실제 학생 사실 없이 세특 문장을 대신 작성해 주는 방식으로는 답할 수 없습니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+자료상 확인 불가입니다. 실제 학생 사실 없이 세특 문장을 대신 작성해 주는 방식으로는 답할 수 없습니다.
+
+[이유]
+- 세특은 교사가 직접 관찰하고 평가한 사실을 바탕으로 작성해야 합니다.
+- 학생이 써 온 문장이나 AI가 만든 문장을 그대로 붙여 넣으면 안 됩니다.
+- 모든 학생 입력이 원칙이며, 부득이한 경우에만 학업성적관리위원회 심의를 거쳐 '특이사항 없음.'을 입력할 수 있습니다.
+
+[학년별 차이]
+- 1·2학년과 3학년의 교과 기록 체계가 다르므로 학년을 먼저 확인해야 합니다.
+
+[주의]
+- 학생의 과목, 학년, 수업 장면, 관찰 사실, 평가 근거를 먼저 정리한 뒤 교사가 직접 문장을 작성해야 합니다.
+- 보조 수단으로 참고하는 것 자체를 곧바로 금지한다고 보기는 어렵지만, AI가 만든 문장을 검토 없이 그대로 입력하면 안 됩니다. 최종 문장과 사실관계는 반드시 교사가 직접 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+- 공식 기재요령: 인쇄 95, 126
+- 기재 길라잡이: 인쇄 63
+```
+
+### t09 학생이 써 온 세특 문장을 교사가 그대로 붙여 넣어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress"]
+- normalizedQuery: `학생이 써 온 세부능력 및 특기사항 문장을 교사가 그대로 붙여 넣어도 되나요?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation", "rule_no_direct_ai_generated_text"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 학생 작성 문장을 그대로 입력하면 안 되며, 교사가 직접 작성해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 학생 작성 문장을 그대로 입력하면 안 되며, 교사가 직접 작성해야 합니다.
+
+[이유]
+- 세특은 교사가 직접 관찰하고 평가한 사실을 바탕으로 작성해야 합니다.
+- 학생 작성 문장을 그대로 입력하면 안 됨이 원칙이며, 학생이 작성한 문장을 그대로 입력하면 안 됨이 원칙입니다.
+- AI가 만든 문장도 검토 없이 그대로 붙여 넣으면 안 됩니다.
+
+[주의]
+- 학생이 써 온 표현은 참고 자료일 수 있지만 최종 문장과 사실관계는 교사가 다시 작성하고 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t10 한자로 세특을 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress", "processing"]
+- normalizedQuery: `한자로 세부능력 및 특기사항을 적어도 되나요?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_hangul_default_english_only", "rule_teacher_owns_descriptive_items"]`
+- usedQaCards: `["qa_processing_hanja_input"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}, {"docId": "guide_2026_hs", "printedPage": "92", "pdfPage": "92"}]`
+- answerFirstLine: 불가합니다. 학교생활기록부 문자는 한글이 원칙이며, 부득이한 경우 영문만 가능하므로 한자 입력 불가입니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 학교생활기록부 문자는 한글이 원칙이며, 부득이한 경우 영문만 가능하므로 한자 입력 불가입니다.
+
+[이유]
+- 한글이 원칙입니다.
+- 부득이한 경우 영문만 가능하게 안내됩니다.
+- 한자 입력 불가로 보는 것이 맞습니다.
+
+[주의]
+- 영문 허용 예시는 용어 표기 예시일 뿐이고, 한자 허용으로 확대 해석하면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+- 기재 길라잡이: 인쇄 92
+```
+
+### t11 학교교육계획에 없던 교내상도 학생부 수상경력에 넣을 수 있나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards", "processing"]
+- normalizedQuery: `학교교육계획서에 없던 수상경력경력도 학교생활기록부 수상경력경력에 넣을 수 있나요?`
+- matchedAliases: `[{"alias": "학생부", "canonicalTerm": "학교생활기록부", "topicIds": []}, {"alias": "수상경력", "canonicalTerm": "수상경력", "topicIds": ["awards"]}, {"alias": "수상", "canonicalTerm": "수상경력", "topicIds": ["awards"]}, {"alias": "교내상", "canonicalTerm": "수상경력", "topicIds": ["awards"]}, {"alias": "학교교육계획", "canonicalTerm": "학교교육계획서", "topicIds": ["awards"]}]`
+- usedChangeCards: `["chg_2026_007_award_plan"]`
+- usedRuleCards: `["rule_awards_must_follow_school_plan", "rule_awards_only_in_awards_section"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}]`
+- answerFirstLine: 불가합니다. 학교교육계획에 반영되지 않은 교내상은 입력할 수 없고, 그 계획에 따라 실시한 교내상만 수상경력에 입력합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 학교교육계획에 반영되지 않은 교내상은 입력할 수 없고, 그 계획에 따라 실시한 교내상만 수상경력에 입력합니다.
+
+[이유]
+- 학교교육계획 반영 여부 확인이 우선입니다.
+- 학년 초 학교교육계획에 연간 대회 및 수상내용 등의 실시계획이 반영된 교내상만 수상경력에 입력합니다.
+
+[주의]
+- 2학기 초 30일 이내 변경계획 공개 여부 확인도 함께 해야 합니다.
+- 학교장 결재를 거친 변경인지 확인하지 않고 임의로 넣으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 24
+- 기재 길라잡이: 인쇄 123
+```
+
+### t12 물품 기부를 봉사시간으로 바꿔 적을 수 있나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["volunteer_service"]
+- normalizedQuery: `물품 기부를 봉사활동 실적 실적시간으로 바꿔 적을 수 있나요?`
+- matchedAliases: `[{"alias": "봉사", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}, {"alias": "봉사시간", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_volunteer_no_simple_donation", "rule_volunteer_curricular_link_grades_1_2", "rule_volunteer_content_50_chars", "rule_volunteer_eight_hours_per_day"]`
+- usedQaCards: `["qa_volunteer_simple_donation", "qa_volunteer_curricular_grade_1_2"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "87", "pdfPage": "93"}, {"docId": "official_guidelines_2026_hs", "printedPage": "86~90", "pdfPage": "92~96"}, {"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "88", "pdfPage": "94"}, {"docId": "guide_2026_hs", "printedPage": "125", "pdfPage": "125"}]`
+- answerFirstLine: 불가합니다. 단순 기부는 봉사활동으로 인정하지 않음이 원칙입니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 단순 기부는 봉사활동으로 인정하지 않음이 원칙입니다.
+
+[이유]
+- 물품이나 금전만 기부한 사실을 봉사시간으로 바꿔 적을 수는 없습니다.
+
+[주의]
+- 봉사활동은 실제 활동 내용과 인정 기준이 맞는지 별도로 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 87
+- 공식 기재요령: 인쇄 86~90
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 88
+- 기재 길라잡이: 인쇄 125
+```
+
+### t13 참고인 조사 출석 때문에 빠진 날은 미인정결석인가요?
+
+- detectedPolicyId: qa_lookup
+- detectedTopicIds: ["attendance"]
+- normalizedQuery: `참고인 조사 출석 때문에 빠진 날은 미인정결석인가요?`
+- matchedAliases: `[]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_long_absence_special_note", "rule_attendance_privacy_committee_note_exception"]`
+- usedQaCards: `["qa_attendance_reference_witness_and_juvenile_case"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}, {"docId": "guide_2026_hs", "printedPage": "106", "pdfPage": "106"}]`
+- answerFirstLine: 자동으로 미인정결석이라고 단정하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+자동으로 미인정결석이라고 단정하면 안 됩니다.
+
+[핵심 정리]
+- 학교가 출석인정 결석 또는 기타결석으로 판단 가능하므로 사안을 확인해야 합니다.
+
+[실무상 주의]
+- 사유와 증빙을 바탕으로 학교 기준에 따라 판단해야 하며, 자동으로 미인정결석이라고 단정하지 않음이 중요합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 58
+- 기재 길라잡이: 인쇄 21
+- 기재 길라잡이: 인쇄 106
+```
+
+### t14 같은 책을 여러 과목에서 읽으면 독서활동상황에 한 번만 적어야 하나요?
+
+- detectedPolicyId: qa_lookup
+- detectedTopicIds: ["reading", "subject_progress"]
+- normalizedQuery: `같은 책을 여러 과목에서 읽으면 독서활동상황에 한 번만 적어야 하나요?`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_027_reading_duplication"]`
+- usedRuleCards: `["rule_reading_same_book_different_evidence", "rule_reading_duplicate_allowed_with_distinct_evidence"]`
+- usedQaCards: `["qa_reading_same_book_duplication"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "156~157", "pdfPage": "162~163"}, {"docId": "guide_2026_hs", "printedPage": "68", "pdfPage": "68"}, {"docId": "guide_2026_hs", "printedPage": "152", "pdfPage": "152"}]`
+- answerFirstLine: 반드시 한 번만 적는다고 보면 안 됩니다. 증빙자료가 다르면 중복 입력 가능하게 설명해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+반드시 한 번만 적는다고 보면 안 됩니다. 증빙자료가 다르면 중복 입력 가능하게 설명해야 합니다.
+
+[핵심 정리]
+- 원서와 번역본처럼 서로 다른 읽기 활동과 증빙자료가 다르면 각각 입력 가능합니다.
+
+[실무상 주의]
+- 같은 책 제목이라는 이유만으로 일괄 불가 처리하지 말고, 증빙자료와 활동의 차이를 함께 확인해야 합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 156~157
+- 기재 길라잡이: 인쇄 68
+- 기재 길라잡이: 인쇄 152
+```
+
+### t15 2026학년도 과목출석률 기준은 어떻게 설명해야 하나요?
+
+- detectedPolicyId: change_2026
+- detectedTopicIds: ["attendance", "subject_progress_grades_1_2", "subject_progress"]
+- normalizedQuery: `2026학년도 과목출석률 기준은 어떻게 설명해야 하나요?`
+- matchedAliases: `[{"alias": "과목출석률", "canonicalTerm": "과목출석률", "topicIds": ["attendance", "subject_progress_grades_1_2"]}]`
+- usedChangeCards: `["chg_2026_004_subject_attendance_rate"]`
+- usedRuleCards: `["rule_subject_attendance_rate_16_sessions", "rule_grade_1_2_credit_5_grade"]`
+- usedQaCards: `["qa_subject_attendance_recognized_absence"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}]`
+- answerFirstLine: 2026학년도 과목출석률은 1·2학년 기준으로 설명해야 하며, 1학점당 수업량 16회의 3분의 2 이상 출석이 핵심입니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026학년도 과목출석률은 1·2학년 기준으로 설명해야 하며, 1학점당 수업량 16회의 3분의 2 이상 출석이 핵심입니다.
+
+[핵심 정리]
+- 1학점당 수업량 16회의 3분의 2 이상 출석이 기준입니다.
+- 1·2학년 기준으로 먼저 설명해야 합니다.
+- 출석인정 결석 또는 결과는 출석 반영으로 처리합니다.
+- 과목 담당교사가 매시간 수업 참여 여부를 확인해 나이스에 입력합니다.
+
+[실무상 주의]
+- 3학년의 기존 체계와 혼동하지 않도록 1·2학년 질문인지 먼저 확인하는 것이 안전합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 93
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 52~53
+```
+
+### t16 예전 학년 세특이 학생끼리 뒤바뀐 경우 정정할 수 있나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress", "corrections"]
+- normalizedQuery: `예전 학년 세부능력 및 특기사항이 학생끼리 뒤바뀐 경우 정정할 수 있나요?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_correction_swapped_items_committee", "rule_correction_requires_objective_evidence"]`
+- usedQaCards: `["qa_correction_swapped_descriptive_items"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "165~166", "pdfPage": "171~172"}, {"docId": "official_guidelines_2026_hs", "printedPage": "165", "pdfPage": "171"}, {"docId": "guide_2026_hs", "printedPage": "156", "pdfPage": "156"}]`
+- answerFirstLine: 조건부 가능입니다. 객관적 증빙자료와 입력 주체 과실 확인, 학업성적관리위원회 심의 여부를 함께 확인해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 객관적 증빙자료와 입력 주체 과실 확인, 학업성적관리위원회 심의 여부를 함께 확인해야 합니다.
+
+[이유]
+- 객관적 증빙자료가 필요합니다.
+- 학업성적관리위원회 심의가 필요한지 확인해야 합니다.
+- 입력 주체 과실 확인이 중요합니다.
+
+[주의]
+- 학생끼리 뒤바뀐 서술형 항목은 기계적으로 바꾸지 말고 당시 입력 근거와 책임 주체를 먼저 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 165~166
+- 공식 기재요령: 인쇄 165
+- 기재 길라잡이: 인쇄 156
+```
+
+### t17 학생의 단점을 써도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `학생의 행동특성 및 종합의견을 써도 돼?`
+- matchedAliases: `[{"alias": "단점", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t18 행특에 학생의 부정적인 행동을 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견에 학생의 행동특성 및 종합의견을 적어도 되나요?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "부정적인 행동", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t19 교외대회 참가 사실을 세특에 적어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards", "subject_progress"]
+- normalizedQuery: `수상경력 참가 사실을 세부능력 및 특기사항에 적어도 돼?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}, {"alias": "교외대회", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t20 자격증 취득 사실을 행특에 적어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior", "certificates", "awards"]
+- normalizedQuery: `자격증 취득 및 국가직무능력표준 이수상황 취득 사실을 행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견에 적어도 돼?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_certificate_only_designated_scope", "rule_behavior_excludes_forbidden_content"]`
+- usedQaCards: `["qa_certificate_private_license"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "66~68", "pdfPage": "72~74"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158~159", "pdfPage": "164~165"}, {"docId": "guide_2026_hs", "printedPage": "25", "pdfPage": "25"}, {"docId": "guide_2026_hs", "printedPage": "154", "pdfPage": "154"}]`
+- answerFirstLine: 불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+
+[이유]
+- 실무적으로는 원칙적으로 불가로 판단하고, 허용 범위를 자격증 항목에서만 확인해야 합니다.
+- 입력 범위는 국가기술자격, 법령상 국가자격, 교육부장관이 지정한 국가공인 민간자격으로 한정됩니다.
+- 세특, 행동특성 및 종합의견, 진로활동은 학생의 교육활동과 성장 과정을 적는 항목이지, 자격증 취득 사실을 대신 적는 항목이 아닙니다.
+- 다른 항목에 입력할 수 없는 내용을 서술형 항목에 우회 입력하는 것도 허용되지 않습니다.
+
+[주의]
+- 먼저 해당 자격이 자격증 항목의 입력 범위에 드는지 확인해야 합니다.
+- 입력 대상이 아닌 자격증은 세특, 행특, 진로활동으로 돌려 적으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 66~68
+- 공식 기재요령: 인쇄 158~159
+- 기재 길라잡이: 인쇄 25
+- 기재 길라잡이: 인쇄 154
+```
+
+### t21 부모 직업을 은근히 드러내도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `공통 기재 금지 사항을 은근히 드러내도 돼?`
+- matchedAliases: `[{"alias": "부모 직업", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 부모 직업이나 가정 배경은 기록해서는 안 되는 내용에 가깝고, 학교생활기록부는 교육활동과 직접 관련된 내용만 적어야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 부모 직업이나 가정 배경은 기록해서는 안 되는 내용에 가깝고, 학교생활기록부는 교육활동과 직접 관련된 내용만 적어야 합니다.
+
+[이유]
+- 학교생활기록부 서술형 항목은 교사가 직접 관찰·평가한 교육활동 사실을 바탕으로 작성합니다.
+- 학생의 가정 배경이나 보호자 정보처럼 교육활동과 직접 관련이 없는 외부 정보는 적지 않는 것이 원칙입니다.
+- 은근히 드러내는 방식처럼 우회적 표현도 피해야 합니다.
+
+[주의]
+- 학생의 성장과 특성을 설명하더라도 학교 안에서 관찰한 행동과 활동 중심으로 적는 것이 안전합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t22 대학명을 진로활동에 적어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["creative_experience", "processing"]
+- normalizedQuery: `공통 기재 금지 사항을 진로활동에 적어도 돼?`
+- matchedAliases: `[{"alias": "대학명", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+
+[이유]
+- 구체적인 대학명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 대학 진학 희망이나 외부 활동을 설명해야 해도 특정 대학명 노출이 필요한지 먼저 점검해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t23 외부 기관명을 적어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `외부 공통 기재 금지 사항을 적어도 돼?`
+- matchedAliases: `[{"alias": "기관명", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}, {"alias": "외부 기관명", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 특정 기관명은 기재 유의 대상이고, 학교 밖 교육기관도 실명 대신 일반화해서 적는 것이 원칙입니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 특정 기관명은 기재 유의 대상이고, 학교 밖 교육기관도 실명 대신 일반화해서 적는 것이 원칙입니다.
+
+[이유]
+- 기관명, 학교 밖 교육기관명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 시도교육감이 승인한 학교 밖 교육기관이라도 실명 대신 '학교 밖 교육기관(기관유형)'처럼 일반화해서 적습니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t24 학생이 쓴 소감문을 근거로 세특 써도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress"]
+- normalizedQuery: `학생이 쓴 소감문을 근거로 세부능력 및 특기사항 써도 돼?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation", "rule_no_direct_ai_generated_text"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 학생 작성 문장을 그대로 입력하면 안 되며, 교사가 직접 작성해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 학생 작성 문장을 그대로 입력하면 안 되며, 교사가 직접 작성해야 합니다.
+
+[이유]
+- 세특은 교사가 직접 관찰하고 평가한 사실을 바탕으로 작성해야 합니다.
+- 학생 작성 문장을 그대로 입력하면 안 됨이 원칙이며, 학생이 작성한 문장을 그대로 입력하면 안 됨이 원칙입니다.
+- AI가 만든 문장도 검토 없이 그대로 붙여 넣으면 안 됩니다.
+
+[주의]
+- 학생이 써 온 표현은 참고 자료일 수 있지만 최종 문장과 사실관계는 교사가 다시 작성하고 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t25 AI가 다듬어준 문장을 넣어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `AI가 다듬어준 문장을 넣어도 돼?`
+- matchedAliases: `[]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_no_direct_ai_generated_text", "rule_english_examples_include_ai", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish", "qa_processing_hanja_input"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}, {"docId": "guide_2026_hs", "printedPage": "92", "pdfPage": "92"}]`
+- answerFirstLine: 조건부 가능입니다. AI가 다듬어준 문장은 참고할 수는 있지만, 그대로 입력하면 안 됨이 원칙이고 교사가 직접 작성하며 사실관계를 확인해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. AI가 다듬어준 문장은 참고할 수는 있지만, 그대로 입력하면 안 됨이 원칙이고 교사가 직접 작성하며 사실관계를 확인해야 합니다.
+
+[이유]
+- 생성형 AI는 표현을 다듬는 보조 수단으로만 참고할 수 있습니다.
+- AI가 만든 문장을 검토 없이 그대로 입력하면 안 됨을 분명히 안내해야 합니다.
+- 최종 문장과 사실관계는 교사가 직접 작성하고 확인하며 책임져야 합니다.
+
+[주의]
+- 학생의 실제 활동과 다른 과장 표현이나 허위 표현이 섞이지 않았는지 교사가 직접 점검해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+- 공식 기재요령: 인쇄 28
+- 기재 길라잡이: 인쇄 10
+- 기재 길라잡이: 인쇄 92
+```
+
+### t26 행특 글자 수 원문 몇 쪽이야?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견 글자 수 원문 몇 쪽이야?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `["chg_2026_017_behavior_limit", "chg_2026_001_accumulation_authority"]`
+- usedRuleCards: `["rule_behavior_300_chars", "rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.208를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.208를 먼저 확인하세요.
+
+[핵심 정리]
+- 행동특성 및 종합의견 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 208, 158쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+- 기재 길라잡이: 인쇄 10
+```
+
+### t27 봉사활동 입력 방법 어디 봐야 해?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["volunteer_service"]
+- normalizedQuery: `봉사활동 실적 실적활동 입력 방법 어디 봐야 해?`
+- matchedAliases: `[{"alias": "봉사", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}, {"alias": "봉사활동", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}]`
+- usedChangeCards: `["chg_2026_015_volunteer_content_limit"]`
+- usedRuleCards: `["rule_volunteer_curricular_link_grades_1_2", "rule_volunteer_content_50_chars"]`
+- usedQaCards: `["qa_volunteer_curricular_grade_1_2"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "86~90", "pdfPage": "92~96"}, {"docId": "guide_2026_hs", "printedPage": "125", "pdfPage": "125"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.86~90를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.86~90를 먼저 확인하세요.
+
+[핵심 정리]
+- 봉사활동 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 86~90, 208쪽
+- 길라잡이: 인쇄 125쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 둘로 나눠 봐야 합니다. 학교교육계획에 따른 정규교육과정 내 봉사활동은 창체 각 영역의 누가기록에서 입력할 수 있고, 정규교육과정 외 봉사활동과 학생 개인계획 봉사활동은 기존처럼 봉사활동실적관리 메뉴에서 입력합니다. 3학년은 기존 체계를 따릅니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 86~90
+- 기재 길라잡이: 인쇄 125
+```
+
+### t28 출결 특기사항 기준 원문 페이지 알려줘.
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["attendance"]
+- normalizedQuery: `출결상황 특기사항 기준 원문 페이지 알려줘.`
+- matchedAliases: `[{"alias": "출결", "canonicalTerm": "출결상황", "topicIds": ["attendance"]}]`
+- usedChangeCards: `["chg_2026_005_attendance_notes"]`
+- usedRuleCards: `["rule_long_absence_special_note", "rule_other_absence_one_day_note", "rule_tardy_earlyleave_result_note"]`
+- usedQaCards: `[]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.58를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.58를 먼저 확인하세요.
+
+[핵심 정리]
+- 출결 특기사항 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 58쪽
+- 길라잡이: 인쇄 21쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 58
+- 기재 길라잡이: 인쇄 21
+```
+
+### t29 과목출석률은 어디에 나와?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["attendance", "subject_progress_grades_1_2", "subject_progress"]
+- normalizedQuery: `과목출석률은 어디에 나와?`
+- matchedAliases: `[{"alias": "과목출석률", "canonicalTerm": "과목출석률", "topicIds": ["attendance", "subject_progress_grades_1_2"]}]`
+- usedChangeCards: `["chg_2026_004_subject_attendance_rate"]`
+- usedRuleCards: `["rule_subject_attendance_rate_16_sessions", "rule_grade_1_2_credit_5_grade"]`
+- usedQaCards: `["qa_subject_attendance_recognized_absence"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.55를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.55를 먼저 확인하세요.
+
+[핵심 정리]
+- 출결 특기사항 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 55쪽
+- 길라잡이: 인쇄 18~19쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 네. 과목출석률에서는 출석인정 결석과 출석인정 결과를 출석으로 반영합니다. 다만 과목 담당교사는 매시간 학생의 수업 참여 여부를 확인해 나이스에 입력해야 합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 93
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 52~53
+```
+
+### t30 1학년 세특이랑 3학년 세특이 뭐가 달라?
+
+- detectedPolicyId: grade_difference
+- detectedTopicIds: ["subject_progress", "subject_progress_grades_1_2", "subject_progress_grade_3"]
+- normalizedQuery: `1학년 세부능력 및 특기사항이랑 3학년 세부능력 및 특기사항이 뭐가 달라?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `["chg_2026_018_subject_progress_split"]`
+- usedRuleCards: `["rule_grade_1_2_credit_5_grade", "rule_grade_3_unit_9_grade", "rule_subject_notes_for_all_students"]`
+- usedQaCards: `["qa_subject_small_class_rank_rule", "qa_subject_special_none"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "93~155", "pdfPage": "99~161"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "official_guidelines_2026_hs", "printedPage": "124", "pdfPage": "130"}, {"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "guide_2026_hs", "printedPage": "52~67", "pdfPage": "52~67"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}, {"docId": "guide_2026_hs", "printedPage": "63", "pdfPage": "63"}, {"docId": "guide_2026_hs", "printedPage": "140", "pdfPage": "140"}]`
+- answerFirstLine: 2026학년도 고등학교 학교생활기록부는 1·2학년과 3학년을 같은 기준으로 보면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026학년도 고등학교 학교생활기록부는 1·2학년과 3학년을 같은 기준으로 보면 안 됩니다.
+
+[핵심 정리]
+- 1·2학년은 2022 개정 교육과정과 고교학점제 기준을 적용합니다.
+- 3학년은 기존 교육과정과 기존 평가 체계를 유지합니다.
+
+[학년별 차이]
+- 1·2학년: 학점과 5등급 체계, 과목출석률, 성취도 및 성취도별 분포비율 체계를 적용합니다.
+- 3학년: 단위수와 9등급 체계를 유지합니다.
+- 1·2학년: 창체는 자율·자치활동, 동아리활동, 진로활동 중심으로 보고 창체 영역명 차이를 함께 설명해야 합니다.
+- 3학년: 창체는 기존 4개 영역 체계를 유지합니다.
+
+[실무상 주의]
+- 1·2학년 교과학습발달상황은 학점, 5등급, 성취도와 성취도별 분포비율을 기준으로 본다.
+- 3학년 교과학습발달상황은 단위수와 9등급 체계를 유지한다.
+- 세특은 모든 학생 입력이 원칙이다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 93~155
+- 공식 기재요령: 인쇄 93
+- 공식 기재요령: 인쇄 124
+- 공식 기재요령: 인쇄 95, 126
+- 기재 길라잡이: 인쇄 52~67
+- 기재 길라잡이: 인쇄 52~53
+- 기재 길라잡이: 인쇄 63
+- 기재 길라잡이: 인쇄 140
+```
+
+### t31 2학년 과목출석률 부족하면 어떻게 돼?
+
+- detectedPolicyId: procedure
+- detectedTopicIds: ["subject_progress_grades_1_2", "attendance", "subject_progress"]
+- normalizedQuery: `2학년 과목출석률 부족하면 어떻게 돼?`
+- matchedAliases: `[{"alias": "과목출석률", "canonicalTerm": "과목출석률", "topicIds": ["attendance", "subject_progress_grades_1_2"]}]`
+- usedChangeCards: `["chg_2026_004_subject_attendance_rate"]`
+- usedRuleCards: `["rule_subject_attendance_rate_16_sessions", "rule_grade_1_2_credit_5_grade"]`
+- usedQaCards: `["qa_subject_attendance_recognized_absence"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}]`
+- answerFirstLine: 2026학년도 과목출석률은 1·2학년 기준으로 설명해야 하며, 1학점당 수업량 16회의 3분의 2 이상 출석이 핵심입니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+2026학년도 과목출석률은 1·2학년 기준으로 설명해야 하며, 1학점당 수업량 16회의 3분의 2 이상 출석이 핵심입니다.
+
+[핵심 정리]
+- 1학점당 수업량 16회의 3분의 2 이상 출석이 기준입니다.
+- 1·2학년 기준으로 먼저 설명해야 합니다.
+- 출석인정 결석 또는 결과는 출석 반영으로 처리합니다.
+- 과목 담당교사가 매시간 수업 참여 여부를 확인해 나이스에 입력합니다.
+
+[실무상 주의]
+- 3학년의 기존 체계와 혼동하지 않도록 1·2학년 질문인지 먼저 확인하는 것이 안전합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 93
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 52~53
+```
+
+### t32 3학년도 과목출석률 적용돼?
+
+- detectedPolicyId: qa_lookup
+- detectedTopicIds: ["attendance", "subject_progress_grades_1_2", "subject_progress_grade_3"]
+- normalizedQuery: `3학년도 과목출석률 적용돼?`
+- matchedAliases: `[{"alias": "과목출석률", "canonicalTerm": "과목출석률", "topicIds": ["attendance", "subject_progress_grades_1_2"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_subject_attendance_rate_16_sessions", "rule_long_absence_special_note"]`
+- usedQaCards: `["qa_subject_attendance_recognized_absence", "qa_attendance_reference_witness_and_juvenile_case", "qa_processing_hanja_input"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}, {"docId": "guide_2026_hs", "printedPage": "106", "pdfPage": "106"}, {"docId": "guide_2026_hs", "printedPage": "92", "pdfPage": "92"}]`
+- answerFirstLine: 같은 방식으로 바로 설명하면 안 됩니다. 과목출석률은 2026학년도 1·2학년 설명에서 핵심이고, 3학년은 기존 체계를 먼저 봐야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+같은 방식으로 바로 설명하면 안 됩니다. 과목출석률은 2026학년도 1·2학년 설명에서 핵심이고, 3학년은 기존 체계를 먼저 봐야 합니다.
+
+[핵심 정리]
+- 1·2학년은 학점, 과목출석률, 5등급 체계를 함께 설명합니다.
+- 3학년은 기존 교육과정에 따라 단위수와 9등급 중심의 기존 체계를 먼저 봐야 합니다.
+- 따라서 '3학년도 과목출석률이 그대로 적용된다'처럼 단정하지 말고, 학년 분기를 먼저 확인해야 합니다.
+
+[학년별 차이]
+- 1·2학년: 학점과 과목출석률 중심
+- 3학년: 단위수와 9등급 중심의 기존 체계
+
+[실무상 주의]
+- 과목출석률 질문은 먼저 1·2학년인지 3학년인지 확인하고 답하는 것이 안전합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 58
+- 공식 기재요령: 인쇄 28
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 21
+- 기재 길라잡이: 인쇄 106
+- 기재 길라잡이: 인쇄 92
+```
+
+### t33 1학년 봉사활동은 어디에 적어?
+
+- detectedPolicyId: procedure
+- detectedTopicIds: ["volunteer_service", "subject_progress_grades_1_2"]
+- normalizedQuery: `1학년 봉사활동 실적 실적활동은 어디에 적어?`
+- matchedAliases: `[{"alias": "봉사", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}, {"alias": "봉사활동", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_volunteer_no_simple_donation", "rule_volunteer_curricular_link_grades_1_2"]`
+- usedQaCards: `["qa_volunteer_curricular_grade_1_2", "qa_volunteer_simple_donation", "qa_creative_area_difference_by_grade"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "87", "pdfPage": "93"}, {"docId": "official_guidelines_2026_hs", "printedPage": "86~90", "pdfPage": "92~96"}, {"docId": "official_guidelines_2026_hs", "printedPage": "77", "pdfPage": "83"}, {"docId": "guide_2026_hs", "printedPage": "125", "pdfPage": "125"}]`
+- answerFirstLine: 둘로 나눠 봐야 합니다. 학교교육계획에 따른 정규교육과정 내 봉사활동은 창체 각 영역의 누가기록에서 입력할 수 있고, 정규교육과정 외 봉사활동과 학생 개인계획 봉사활동은 기존처럼 봉사활동실적관리 메뉴에서 입력합니다. 3학년은 기존 체계를 따릅니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+둘로 나눠 봐야 합니다. 학교교육계획에 따른 정규교육과정 내 봉사활동은 창체 각 영역의 누가기록에서 입력할 수 있고, 정규교육과정 외 봉사활동과 학생 개인계획 봉사활동은 기존처럼 봉사활동실적관리 메뉴에서 입력합니다. 3학년은 기존 체계를 따릅니다.
+
+[핵심 정리]
+- 금품이나 물품의 단순 기부는 봉사활동 실적으로 인정하지 않는다.
+- 1·2학년의 정규교육과정 내 봉사활동은 창체 각 영역과 연계해 기록할 수 있다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 87
+- 공식 기재요령: 인쇄 86~90
+- 공식 기재요령: 인쇄 77
+- 기재 길라잡이: 인쇄 125
+```
+
+### t34 같은 책을 여러 과목에서 읽으면 독서활동에 또 넣어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["reading", "subject_progress"]
+- normalizedQuery: `같은 책을 여러 과목에서 읽으면 독서활동에 또 넣어도 돼?`
+- matchedAliases: `[]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_small_class_rank_marker_by_grade", "rule_performance_assessment_no_homework_or_memorization", "rule_reading_duplicate_allowed_with_distinct_evidence", "rule_reading_same_book_different_evidence"]`
+- usedQaCards: `["qa_subject_small_class_rank_rule", "qa_reading_same_book_duplication"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "95, 126", "pdfPage": "101, 132"}, {"docId": "official_guidelines_2026_hs", "printedPage": "101, 132", "pdfPage": "107, 138"}, {"docId": "official_guidelines_2026_hs", "printedPage": "156~157", "pdfPage": "162~163"}, {"docId": "guide_2026_hs", "printedPage": "140", "pdfPage": "140"}, {"docId": "guide_2026_hs", "printedPage": "152", "pdfPage": "152"}]`
+- answerFirstLine: 조건부 가능입니다. 같은 책이라도 과목이나 증빙자료가 다르면 중복 입력 가능입니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 같은 책이라도 과목이나 증빙자료가 다르면 중복 입력 가능입니다.
+
+[이유]
+- 같은 도서라도 과목, 학년, 학기, 영역이 다르거나 증빙자료가 다르면 각각 입력할 수 있습니다.
+- 원서와 번역본도 제출한 증빙자료가 다르면 각각 입력할 수 있습니다.
+- 중복 입력 가능 여부는 같은 책인지보다 기록 맥락과 증빙자료가 다른지가 핵심입니다.
+
+[주의]
+- 증빙자료 차이 없이 같은 도서를 반복 입력하는 것은 허용되지 않습니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 95, 126
+- 공식 기재요령: 인쇄 101, 132
+- 공식 기재요령: 인쇄 156~157
+- 기재 길라잡이: 인쇄 140
+- 기재 길라잡이: 인쇄 152
+```
+
+### t35 참고인 조사로 결석하면 미인정이야?
+
+- detectedPolicyId: qa_lookup
+- detectedTopicIds: ["attendance"]
+- normalizedQuery: `참고인 조사로 결석하면 미인정이야?`
+- matchedAliases: `[]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_long_absence_special_note", "rule_attendance_privacy_committee_note_exception"]`
+- usedQaCards: `["qa_attendance_reference_witness_and_juvenile_case"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}, {"docId": "guide_2026_hs", "printedPage": "106", "pdfPage": "106"}]`
+- answerFirstLine: 자동으로 미인정결석이라고 단정하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+자동으로 미인정결석이라고 단정하면 안 됩니다.
+
+[핵심 정리]
+- 학교가 출석인정 결석 또는 기타결석으로 판단 가능하므로 사안을 확인해야 합니다.
+
+[실무상 주의]
+- 사유와 증빙을 바탕으로 학교 기준에 따라 판단해야 하며, 자동으로 미인정결석이라고 단정하지 않음이 중요합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 58
+- 기재 길라잡이: 인쇄 21
+- 기재 길라잡이: 인쇄 106
+```
+
+### t36 작년 세특이 바뀌었으면 정정 가능해?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress", "corrections"]
+- normalizedQuery: `작년 세부능력 및 특기사항이 바뀌었으면 정정 가능해?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_correction_swapped_items_committee", "rule_correction_requires_objective_evidence"]`
+- usedQaCards: `["qa_correction_swapped_descriptive_items"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "165~166", "pdfPage": "171~172"}, {"docId": "official_guidelines_2026_hs", "printedPage": "165", "pdfPage": "171"}, {"docId": "guide_2026_hs", "printedPage": "156", "pdfPage": "156"}]`
+- answerFirstLine: 조건부 가능입니다. 객관적 증빙자료와 입력 주체 과실 확인, 학업성적관리위원회 심의 여부를 함께 확인해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 객관적 증빙자료와 입력 주체 과실 확인, 학업성적관리위원회 심의 여부를 함께 확인해야 합니다.
+
+[이유]
+- 객관적 증빙자료가 필요합니다.
+- 학업성적관리위원회 심의가 필요한지 확인해야 합니다.
+- 입력 주체 과실 확인이 중요합니다.
+
+[주의]
+- 학생끼리 뒤바뀐 서술형 항목은 기계적으로 바꾸지 말고 당시 입력 근거와 책임 주체를 먼저 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 165~166
+- 공식 기재요령: 인쇄 165
+- 기재 길라잡이: 인쇄 156
+```
+
+### t37 애가 좀 게으른 편인데 행특에 써도 되나?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `애가 좀 행동특성 및 종합의견 편인데 행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견에 써도 되나?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "게으른", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t38 수업 태도가 계속 안 좋은데 기록 가능해?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 종합의견가 계속 안 좋은데 기록 가능해?`
+- matchedAliases: `[{"alias": "수업 태도", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t39 친구들과 갈등이 잦다는 내용을 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `친구들과 행동특성 및 종합의견이 잦다는 내용을 적어도 되나요?`
+- matchedAliases: `[{"alias": "갈등", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t40 책임감이 부족하다는 식으로 써도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 종합의견하다는 식으로 써도 돼?`
+- matchedAliases: `[{"alias": "책임감이 부족", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t41 부정적인 면도 생기부에 남겨야 하나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 종합의견도 학교생활기록부에 남겨야 하나요?`
+- matchedAliases: `[{"alias": "생기부", "canonicalTerm": "학교생활기록부", "topicIds": []}, {"alias": "부정적인 면", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}]`
+- answerFirstLine: 조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+조건부 가능입니다. 학생의 부정적 행동특성을 아예 쓸 수 없는 것은 아니지만, 단순한 단점 나열은 부적절하고 낙인 표현도 쓰면 안 됩니다.
+
+[이유]
+- 행동특성 및 종합의견은 학교 교육활동 전반에서 지속적으로 관찰한 행동특성을 바탕으로, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점, 곧 학생의 성장을 지원하는 교육적 관점에서 작성해야 합니다.
+- 부정적인 행동특성은 구체적 관찰 근거가 있어야 하며, 부정적인 행동특성은 구체적 누가기록 권장이 원칙입니다.
+- 다른 항목에 입력할 수 없는 금지 내용을 행동특성 및 종합의견에 우회 입력할 수는 없습니다.
+
+[주의]
+- 학생을 깎아내리는 표현, 성격이나 인성을 단정하는 표현, 학생의 단점만 나열하는 방식은 피해야 합니다.
+- 누가기록 여부와 방법은 학교장이 정할 수 있으므로 학교 내부 기준도 함께 확인하는 것이 안전합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+```
+
+### t42 외부 대회 나간 걸 세특에 써도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards", "subject_progress"]
+- normalizedQuery: `수상경력 수상경력 세부능력 및 특기사항에 써도 돼?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}, {"alias": "외부 대회", "canonicalTerm": "수상경력", "topicIds": ["awards"]}, {"alias": "나간 걸", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t43 교외 공모전 참여 사실을 진로활동에 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards", "creative_experience"]
+- normalizedQuery: `수상경력 참여 사실을 진로활동에 적어도 되나요?`
+- matchedAliases: `[{"alias": "교외 공모전", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t44 대회 준비 과정을 행특에 녹여 쓰면 괜찮나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior", "awards"]
+- normalizedQuery: `수상경력 과정을 행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견에 녹여 쓰면 괜찮나요?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "대회 준비", "canonicalTerm": "수상경력", "topicIds": ["awards"]}, {"alias": "대회 준비 과정", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t45 상은 못 받았고 참가만 했는데 기록 가능해?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards"]
+- normalizedQuery: `상은 못 받았고 수상경력 했는데 기록 가능해?`
+- matchedAliases: `[{"alias": "참가만", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t46 외부상 받은 사실을 다른 항목에 쓰면 안 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["awards"]
+- normalizedQuery: `수상경력 받은 사실을 다른 항목에 쓰면 안 되나요?`
+- matchedAliases: `[{"alias": "외부상", "canonicalTerm": "수상경력", "topicIds": ["awards"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_no_competition_participation_record", "rule_awards_only_in_awards_section", "rule_awards_must_follow_school_plan"]`
+- usedQaCards: `["qa_awards_competition_participation"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "61~65", "pdfPage": "67~71"}, {"docId": "official_guidelines_2026_hs", "printedPage": "65", "pdfPage": "71"}, {"docId": "guide_2026_hs", "printedPage": "123", "pdfPage": "123"}, {"docId": "guide_2026_hs", "printedPage": "24", "pdfPage": "24"}]`
+- answerFirstLine: 불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 교외대회 참가 사실과 그 성적·수상 실적은 세특에 기재 불가이고, 교내대회 참가 사실도 수상경력 외 다른 항목에 우회 입력하면 안 됩니다.
+
+[이유]
+- 교외대회 관련 사실은 학교장 허가를 받아 참여한 경우라도 세특이나 행특 등 다른 항목에 적을 수 없습니다.
+- 입력 가능한 교내상은 학교교육계획에 따라 실시한 경우에 한해 수상경력 항목에서만 다룹니다.
+- 대회 명칭을 단순 행사나 활동처럼 바꾸어 세특에 적는 우회 입력도 허용되지 않습니다.
+
+[주의]
+- 질문이 세특이든 행특이든 핵심 판단은 같습니다. 대회 참가 사실만으로는 기재 불가입니다.
+- 교내상 입력 가능 여부는 학교교육계획 반영 여부와 2학기 초 30일 이내 변경계획 공개 여부까지 함께 확인해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 61~65
+- 공식 기재요령: 인쇄 65
+- 기재 길라잡이: 인쇄 123
+- 기재 길라잡이: 인쇄 24
+```
+
+### t47 컴활 자격증 딴 걸 세특에 언급해도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["certificates", "subject_progress", "awards"]
+- normalizedQuery: `자격증 취득 및 국가직무능력표준 이수상황 자격증 취득 및 국가직무능력표준 이수상황 딴 걸 세부능력 및 특기사항에 언급해도 돼?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}, {"alias": "자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}, {"alias": "컴활", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_certificate_only_designated_scope", "rule_behavior_excludes_forbidden_content"]`
+- usedQaCards: `["qa_certificate_private_license"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "66~68", "pdfPage": "72~74"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158~159", "pdfPage": "164~165"}, {"docId": "guide_2026_hs", "printedPage": "25", "pdfPage": "25"}, {"docId": "guide_2026_hs", "printedPage": "154", "pdfPage": "154"}]`
+- answerFirstLine: 불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+
+[이유]
+- 실무적으로는 원칙적으로 불가로 판단하고, 허용 범위를 자격증 항목에서만 확인해야 합니다.
+- 입력 범위는 국가기술자격, 법령상 국가자격, 교육부장관이 지정한 국가공인 민간자격으로 한정됩니다.
+- 세특, 행동특성 및 종합의견, 진로활동은 학생의 교육활동과 성장 과정을 적는 항목이지, 자격증 취득 사실을 대신 적는 항목이 아닙니다.
+- 다른 항목에 입력할 수 없는 내용을 서술형 항목에 우회 입력하는 것도 허용되지 않습니다.
+
+[주의]
+- 먼저 해당 자격이 자격증 항목의 입력 범위에 드는지 확인해야 합니다.
+- 입력 대상이 아닌 자격증은 세특, 행특, 진로활동으로 돌려 적으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 66~68
+- 공식 기재요령: 인쇄 158~159
+- 기재 길라잡이: 인쇄 25
+- 기재 길라잡이: 인쇄 154
+```
+
+### t48 민간자격증 취득 사실을 행특에 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["behavior", "certificates", "awards"]
+- normalizedQuery: `자격증 취득 및 국가직무능력표준 이수상황 취득 및 국가직무능력표준 이수상황 취득 사실을 행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견에 적어도 되나요?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}, {"alias": "자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}, {"alias": "민간자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_certificate_only_designated_scope", "rule_behavior_excludes_forbidden_content"]`
+- usedQaCards: `["qa_certificate_private_license"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "66~68", "pdfPage": "72~74"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158~159", "pdfPage": "164~165"}, {"docId": "guide_2026_hs", "printedPage": "25", "pdfPage": "25"}, {"docId": "guide_2026_hs", "printedPage": "154", "pdfPage": "154"}]`
+- answerFirstLine: 불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+
+[이유]
+- 실무적으로는 원칙적으로 불가로 판단하고, 허용 범위를 자격증 항목에서만 확인해야 합니다.
+- 입력 범위는 국가기술자격, 법령상 국가자격, 교육부장관이 지정한 국가공인 민간자격으로 한정됩니다.
+- 세특, 행동특성 및 종합의견, 진로활동은 학생의 교육활동과 성장 과정을 적는 항목이지, 자격증 취득 사실을 대신 적는 항목이 아닙니다.
+- 다른 항목에 입력할 수 없는 내용을 서술형 항목에 우회 입력하는 것도 허용되지 않습니다.
+
+[주의]
+- 먼저 해당 자격이 자격증 항목의 입력 범위에 드는지 확인해야 합니다.
+- 입력 대상이 아닌 자격증은 세특, 행특, 진로활동으로 돌려 적으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 66~68
+- 공식 기재요령: 인쇄 158~159
+- 기재 길라잡이: 인쇄 25
+- 기재 길라잡이: 인쇄 154
+```
+
+### t49 국제공인 자격증은 학생부에 넣을 수 있나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["certificates", "processing", "awards"]
+- normalizedQuery: `자격증 취득 및 국가직무능력표준 이수상황 취득 및 국가직무능력표준 이수상황은 학교생활기록부에 넣을 수 있나요?`
+- matchedAliases: `[{"alias": "학생부", "canonicalTerm": "학교생활기록부", "topicIds": []}, {"alias": "자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}, {"alias": "국제공인 자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_certificate_only_designated_scope", "rule_behavior_excludes_forbidden_content"]`
+- usedQaCards: `["qa_certificate_private_license"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "66~68", "pdfPage": "72~74"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158~159", "pdfPage": "164~165"}, {"docId": "guide_2026_hs", "printedPage": "25", "pdfPage": "25"}, {"docId": "guide_2026_hs", "printedPage": "154", "pdfPage": "154"}]`
+- answerFirstLine: 불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+
+[이유]
+- 실무적으로는 원칙적으로 불가로 판단하고, 허용 범위를 자격증 항목에서만 확인해야 합니다.
+- 입력 범위는 국가기술자격, 법령상 국가자격, 교육부장관이 지정한 국가공인 민간자격으로 한정됩니다.
+- 세특, 행동특성 및 종합의견, 진로활동은 학생의 교육활동과 성장 과정을 적는 항목이지, 자격증 취득 사실을 대신 적는 항목이 아닙니다.
+- 다른 항목에 입력할 수 없는 내용을 서술형 항목에 우회 입력하는 것도 허용되지 않습니다.
+
+[주의]
+- 먼저 해당 자격이 자격증 항목의 입력 범위에 드는지 확인해야 합니다.
+- 입력 대상이 아닌 자격증은 세특, 행특, 진로활동으로 돌려 적으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 66~68
+- 공식 기재요령: 인쇄 158~159
+- 기재 길라잡이: 인쇄 25
+- 기재 길라잡이: 인쇄 154
+```
+
+### t50 자격증 준비 과정을 진로활동에 써도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["certificates", "creative_experience", "awards"]
+- normalizedQuery: `자격증 취득 및 국가직무능력표준 이수상황 준비 과정을 진로활동에 써도 되나요?`
+- matchedAliases: `[{"alias": "자격증", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}, {"alias": "자격증 준비 과정", "canonicalTerm": "자격증 취득 및 국가직무능력표준 이수상황", "topicIds": ["certificates"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_certificate_only_designated_scope", "rule_behavior_excludes_forbidden_content"]`
+- usedQaCards: `["qa_certificate_private_license"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "66~68", "pdfPage": "72~74"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158~159", "pdfPage": "164~165"}, {"docId": "guide_2026_hs", "printedPage": "25", "pdfPage": "25"}, {"docId": "guide_2026_hs", "printedPage": "154", "pdfPage": "154"}]`
+- answerFirstLine: 불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 자격증 취득 사실은 입력 범위가 정해진 자격증 항목에서만 다루고, 세특·행특·진로활동 등에 우회 입력하면 안 됩니다.
+
+[이유]
+- 실무적으로는 원칙적으로 불가로 판단하고, 허용 범위를 자격증 항목에서만 확인해야 합니다.
+- 입력 범위는 국가기술자격, 법령상 국가자격, 교육부장관이 지정한 국가공인 민간자격으로 한정됩니다.
+- 세특, 행동특성 및 종합의견, 진로활동은 학생의 교육활동과 성장 과정을 적는 항목이지, 자격증 취득 사실을 대신 적는 항목이 아닙니다.
+- 다른 항목에 입력할 수 없는 내용을 서술형 항목에 우회 입력하는 것도 허용되지 않습니다.
+
+[주의]
+- 먼저 해당 자격이 자격증 항목의 입력 범위에 드는지 확인해야 합니다.
+- 입력 대상이 아닌 자격증은 세특, 행특, 진로활동으로 돌려 적으면 안 됩니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 66~68
+- 공식 기재요령: 인쇄 158~159
+- 기재 길라잡이: 인쇄 25
+- 기재 길라잡이: 인쇄 154
+```
+
+### t51 서울대 캠프 참여라고 써도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `공통 기재 금지 사항 캠프 참여라고 써도 돼?`
+- matchedAliases: `[{"alias": "서울대", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+
+[이유]
+- 구체적인 대학명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 대학 진학 희망이나 외부 활동을 설명해야 해도 특정 대학명 노출이 필요한지 먼저 점검해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t52 특정 대학 이름을 진로활동에 넣어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["creative_experience", "processing"]
+- normalizedQuery: `공통 기재 금지 사항을 진로활동에 넣어도 되나요?`
+- matchedAliases: `[{"alias": "특정 대학 이름", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 특정 대학명은 기재 유의 대상이므로, 진로활동을 설명하더라도 대학명을 직접 드러내는 방식은 피해야 합니다.
+
+[이유]
+- 구체적인 대학명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 대학 진학 희망이나 외부 활동을 설명해야 해도 특정 대학명 노출이 필요한지 먼저 점검해야 합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t53 외부 기관명을 그대로 적어도 돼?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `외부 공통 기재 금지 사항을 그대로 적어도 돼?`
+- matchedAliases: `[{"alias": "기관명", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}, {"alias": "외부 기관명", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 특정 기관명은 기재 유의 대상이고, 학교 밖 교육기관도 실명 대신 일반화해서 적는 것이 원칙입니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 특정 기관명은 기재 유의 대상이고, 학교 밖 교육기관도 실명 대신 일반화해서 적는 것이 원칙입니다.
+
+[이유]
+- 기관명, 학교 밖 교육기관명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 시도교육감이 승인한 학교 밖 교육기관이라도 실명 대신 '학교 밖 교육기관(기관유형)'처럼 일반화해서 적습니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t54 기업 이름을 세특에 써도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["subject_progress", "processing"]
+- normalizedQuery: `공통 기재 금지 사항을 세부능력 및 특기사항에 써도 되나요?`
+- matchedAliases: `[{"alias": "세특", "canonicalTerm": "세부능력 및 특기사항", "topicIds": ["subject_progress"]}, {"alias": "기업 이름", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 기업 이름이나 회사 이름 같은 실명은 기재 유의 대상이므로, 세특이나 다른 서술형 항목에 그대로 드러내는 방식은 피해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 기업 이름이나 회사 이름 같은 실명은 기재 유의 대상이므로, 세특이나 다른 서술형 항목에 그대로 드러내는 방식은 피해야 합니다.
+
+[이유]
+- 기업 이름, 회사 이름, 상호명은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 기업 이름이나 회사 이름을 적고 싶을 때도 실명 노출이 꼭 필요한지 먼저 점검하고, 가능하면 활동 유형 수준으로 일반화하는 편이 안전합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t55 강사 이름을 적어도 되나요?
+
+- detectedPolicyId: recordability
+- detectedTopicIds: ["processing"]
+- normalizedQuery: `공통 기재 금지 사항을 적어도 되나요?`
+- matchedAliases: `[{"alias": "강사 이름", "canonicalTerm": "공통 기재 금지 사항", "topicIds": ["processing"]}]`
+- usedChangeCards: `[]`
+- usedRuleCards: `["rule_teacher_owns_descriptive_items", "rule_input_based_on_direct_observation"]`
+- usedQaCards: `["qa_processing_ai_polish"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "19", "pdfPage": "25"}, {"docId": "official_guidelines_2026_hs", "printedPage": "27", "pdfPage": "33"}]`
+- answerFirstLine: 불가합니다. 강사 이름 같은 개인 실명은 기재 유의 대상이므로, 교육활동을 설명하더라도 그대로 노출하는 방식은 피해야 합니다.
+- result: pass
+- failReason: -
+
+```text
+[판단]
+불가합니다. 강사 이름 같은 개인 실명은 기재 유의 대상이므로, 교육활동을 설명하더라도 그대로 노출하는 방식은 피해야 합니다.
+
+[이유]
+- 강사 이름은(는) 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 실무적으로는 원칙적으로 그대로 적지 않습니다.
+- 구체적인 대학명, 기관명, 상호명, 강사명은 학교생활기록부에 직접 노출하지 않는 방향으로 봐야 합니다.
+- 학교 밖 교육기관을 적어야 하는 경우에도 기관명을 그대로 적지 않고, 학교 밖 교육기관 또는 기관유형 수준으로 일반화합니다.
+- 기재 유의 사항은 창체, 진로활동, 서술형 항목 전반에 공통으로 적용됩니다.
+
+[주의]
+- 외부 강의나 프로그램을 설명할 때도 강사 개인의 실명 대신 활동 내용과 기관 유형 중심으로 정리하는 편이 안전합니다.
+
+[근거 페이지]
+- 공식 기재요령: 인쇄 19
+- 공식 기재요령: 인쇄 27
+```
+
+### t56 행특 글자 수는 원문 어디야?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["behavior"]
+- normalizedQuery: `행동특성 및 행동특성 및 종합의견 및 행동특성 및 종합의견 글자 수는 원문 어디야?`
+- matchedAliases: `[{"alias": "행특", "canonicalTerm": "행동특성 및 종합의견", "topicIds": ["behavior"]}]`
+- usedChangeCards: `["chg_2026_017_behavior_limit", "chg_2026_001_accumulation_authority"]`
+- usedRuleCards: `["rule_behavior_300_chars", "rule_behavior_negative_traits_educational_perspective"]`
+- usedQaCards: `["qa_behavior_can_record_student_weakness"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "28", "pdfPage": "34"}, {"docId": "official_guidelines_2026_hs", "printedPage": "158", "pdfPage": "164"}, {"docId": "official_guidelines_2026_hs", "printedPage": "159", "pdfPage": "165"}, {"docId": "guide_2026_hs", "printedPage": "10", "pdfPage": "10"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.208를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.208를 먼저 확인하세요.
+
+[핵심 정리]
+- 행동특성 및 종합의견 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 208, 158쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 조건부로 가능하다. 다만 단순히 학생의 단점을 나열하거나 낙인찍는 방식은 부적절하다. 행동특성 및 종합의견은 학년 동안 지속적으로 관찰한 학생의 행동특성을 바탕으로 학생을 총체적으로 이해할 수 있도록 작성하며, 학생의 성장 정도와 발전 가능성을 고려한 교육적 관점에서 작성해야 한다. 부정적인 행동특성을 입력하는 경우에는 구체적인 누가기록을 바탕으로 하는 것이 권장된다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 28
+- 공식 기재요령: 인쇄 158
+- 공식 기재요령: 인쇄 159
+- 기재 길라잡이: 인쇄 10
+```
+
+### t57 출결 특기사항 페이지 알려줘.
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["attendance"]
+- normalizedQuery: `출결상황 특기사항 페이지 알려줘.`
+- matchedAliases: `[{"alias": "출결", "canonicalTerm": "출결상황", "topicIds": ["attendance"]}]`
+- usedChangeCards: `["chg_2026_005_attendance_notes"]`
+- usedRuleCards: `["rule_long_absence_special_note", "rule_other_absence_one_day_note", "rule_tardy_earlyleave_result_note"]`
+- usedQaCards: `[]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "58", "pdfPage": "64"}, {"docId": "guide_2026_hs", "printedPage": "21", "pdfPage": "21"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.58를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.58를 먼저 확인하세요.
+
+[핵심 정리]
+- 출결 특기사항 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 58쪽
+- 길라잡이: 인쇄 21쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 58
+- 기재 길라잡이: 인쇄 21
+```
+
+### t58 과목출석률 몇 쪽 봐야 해?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["attendance", "subject_progress_grades_1_2", "subject_progress"]
+- normalizedQuery: `과목출석률 몇 쪽 봐야 해?`
+- matchedAliases: `[{"alias": "과목출석률", "canonicalTerm": "과목출석률", "topicIds": ["attendance", "subject_progress_grades_1_2"]}]`
+- usedChangeCards: `["chg_2026_004_subject_attendance_rate"]`
+- usedRuleCards: `["rule_subject_attendance_rate_16_sessions", "rule_grade_1_2_credit_5_grade"]`
+- usedQaCards: `["qa_subject_attendance_recognized_absence"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "55", "pdfPage": "61"}, {"docId": "official_guidelines_2026_hs", "printedPage": "93", "pdfPage": "99"}, {"docId": "guide_2026_hs", "printedPage": "18~19", "pdfPage": "18~19"}, {"docId": "guide_2026_hs", "printedPage": "52~53", "pdfPage": "52~53"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.55를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.55를 먼저 확인하세요.
+
+[핵심 정리]
+- 출결 특기사항 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 55쪽
+- 길라잡이: 인쇄 18~19쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 네. 과목출석률에서는 출석인정 결석과 출석인정 결과를 출석으로 반영합니다. 다만 과목 담당교사는 매시간 학생의 수업 참여 여부를 확인해 나이스에 입력해야 합니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 55
+- 공식 기재요령: 인쇄 93
+- 기재 길라잡이: 인쇄 18~19
+- 기재 길라잡이: 인쇄 52~53
+```
+
+### t59 봉사활동 입력 방법은 기재요령 어디에 있어?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["volunteer_service"]
+- normalizedQuery: `봉사활동 실적 실적활동 입력 방법은 기재요령 어디에 있어?`
+- matchedAliases: `[{"alias": "봉사", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}, {"alias": "봉사활동", "canonicalTerm": "봉사활동 실적", "topicIds": ["volunteer_service"]}]`
+- usedChangeCards: `["chg_2026_015_volunteer_content_limit"]`
+- usedRuleCards: `["rule_volunteer_curricular_link_grades_1_2", "rule_volunteer_content_50_chars"]`
+- usedQaCards: `["qa_volunteer_curricular_grade_1_2"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "208", "pdfPage": "214"}, {"docId": "official_guidelines_2026_hs", "printedPage": "86~90", "pdfPage": "92~96"}, {"docId": "guide_2026_hs", "printedPage": "125", "pdfPage": "125"}]`
+- answerFirstLine: 공식 기재요령 기준으로는 p.86~90를 먼저 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+공식 기재요령 기준으로는 p.86~90를 먼저 확인하세요.
+
+[핵심 정리]
+- 봉사활동 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 86~90, 208쪽
+- 길라잡이: 인쇄 125쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 둘로 나눠 봐야 합니다. 학교교육계획에 따른 정규교육과정 내 봉사활동은 창체 각 영역의 누가기록에서 입력할 수 있고, 정규교육과정 외 봉사활동과 학생 개인계획 봉사활동은 기존처럼 봉사활동실적관리 메뉴에서 입력합니다. 3학년은 기존 체계를 따릅니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 208
+- 공식 기재요령: 인쇄 86~90
+- 기재 길라잡이: 인쇄 125
+```
+
+### t60 독서활동 중복 입력은 길라잡이 어디야?
+
+- detectedPolicyId: page_lookup
+- detectedTopicIds: ["reading"]
+- normalizedQuery: `독서활동 중복 입력은 길라잡이 어디야?`
+- matchedAliases: `[]`
+- usedChangeCards: `["chg_2026_027_reading_duplication"]`
+- usedRuleCards: `["rule_reading_same_book_different_evidence", "rule_reading_duplicate_allowed_with_distinct_evidence"]`
+- usedQaCards: `["qa_reading_same_book_duplication"]`
+- usedPageRefs: `[{"docId": "official_guidelines_2026_hs", "printedPage": "156~157", "pdfPage": "162~163"}, {"docId": "guide_2026_hs", "printedPage": "68", "pdfPage": "68"}, {"docId": "guide_2026_hs", "printedPage": "152", "pdfPage": "152"}]`
+- answerFirstLine: 길라잡이 Q&A 기준으로는 p.152를 확인하세요.
+- result: pass
+- failReason: -
+
+```text
+[결론]
+길라잡이 Q&A 기준으로는 p.152를 확인하세요.
+
+[핵심 정리]
+- 독서활동 관련 원문 위치를 먼저 확인한 뒤 세부 기준을 읽으면 됩니다.
+- 공식 기재요령: 인쇄 156~157쪽
+- 길라잡이: 인쇄 152, 68쪽
+
+[실무상 주의]
+- 원문 확인이 목적일 때도 답변 생성은 brain 카드 기준으로 먼저 찾고, 원문은 참고 페이지 확인용으로만 사용합니다.
+- 가능합니다. 같은 도서라도 과목, 학년, 학기, 영역이 다르거나 증빙자료가 다르면 각각 입력할 수 있습니다. 원서와 번역본도 증빙이 다르면 각각 입력할 수 있습니다.
+
+[참고 자료]
+- 공식 기재요령: 인쇄 156~157
+- 기재 길라잡이: 인쇄 68
+- 기재 길라잡이: 인쇄 152
+```
