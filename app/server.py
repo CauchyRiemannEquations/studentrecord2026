@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -23,6 +24,9 @@ class AppHandler(SimpleHTTPRequestHandler):
 
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
+        if parsed.path in {"/api/health", "/health", "/healthz"}:
+            self._send_json({"ok": True})
+            return
         if parsed.path == "/api/meta":
             self._send_json(
                 {
@@ -33,6 +37,8 @@ class AppHandler(SimpleHTTPRequestHandler):
             )
             return
         if parsed.path in {"/", "/index.html"}:
+            self.path = "/index.html"
+        elif not parsed.path.startswith("/api/"):
             self.path = "/index.html"
         return super().do_GET()
 
@@ -75,9 +81,11 @@ class AppHandler(SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
 
-def run_server(host: str = "127.0.0.1", port: int = 8000) -> None:
-    server = ThreadingHTTPServer((host, port), AppHandler)
-    print(f"Serving on http://{host}:{port}")
+def run_server(host: str | None = None, port: int | None = None) -> None:
+    resolved_host = host or os.environ.get("HOST", "0.0.0.0")
+    resolved_port = port or int(os.environ.get("PORT", "8000"))
+    server = ThreadingHTTPServer((resolved_host, resolved_port), AppHandler)
+    print(f"Serving on http://{resolved_host}:{resolved_port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
