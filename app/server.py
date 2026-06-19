@@ -27,6 +27,7 @@ class AppHandler(SimpleHTTPRequestHandler):
         if parsed.path in {"/api/health", "/health", "/healthz"}:
             self._send_json({"ok": True})
             return
+
         if parsed.path == "/api/meta":
             self._send_json(
                 {
@@ -36,10 +37,12 @@ class AppHandler(SimpleHTTPRequestHandler):
                 }
             )
             return
+
         if parsed.path in {"/", "/index.html"}:
             self.path = "/index.html"
-        elif not parsed.path.startswith("/api/"):
+        elif not parsed.path.startswith("/api/") and "." not in Path(parsed.path).name:
             self.path = "/index.html"
+
         return super().do_GET()
 
     def do_POST(self) -> None:

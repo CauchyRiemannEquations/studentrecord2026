@@ -32,6 +32,7 @@ const debugTopics = document.getElementById("debug-topics");
 const debugAnswerStart = document.getElementById("debug-answer-start");
 const debugQuality = document.getElementById("debug-quality");
 const developerPanel = document.getElementById("developer-panel");
+
 const isDevMode = new URLSearchParams(window.location.search).get("dev") === "1";
 
 if (!isDevMode && developerPanel) {
@@ -137,7 +138,7 @@ function getEvidenceHeading(publicSources) {
     return "근거 요약";
   }
   if (labels.length > 1) {
-    return "공식 기준과 길라잡이 요약";
+    return "공식 기재요령과 길라잡이 요약";
   }
   if (labels[0] === "공식 기재요령") {
     return "공식 기재요령 요약";
@@ -154,7 +155,7 @@ function renderSectionHeadings(labels = {}) {
 }
 
 function updateAnswerOverview(question, references) {
-  answerSummaryTitle.textContent = `“${question}” 기준 정리`;
+  answerSummaryTitle.textContent = `‘${question}’ 기준 정리`;
   const officialText = references.official.length
     ? `공식 기재요령 p.${references.official[0].printedPage}`
     : "공식 기재요령 쪽수 확인 필요";
@@ -173,7 +174,7 @@ function showFriendlyError(message) {
     <ul>
       <li>질문 표현을 조금 더 구체적으로 바꿔 보세요.</li>
       <li>학년, 항목, 질문 유형을 직접 선택하면 더 안정적으로 찾을 수 있습니다.</li>
-      <li>잠시 후 다시 시도해도 같은 문제가 있으면 개발 모드에서 확인해 주세요.</li>
+      <li>문제가 계속되면 개발 확인용 패널에서 라우팅 상태를 점검해 주세요.</li>
     </ul>
   `;
 }
@@ -199,9 +200,11 @@ async function askQuestion() {
         selectedQuestionType: questionTypeSelect.value,
       }),
     });
+
     if (!response.ok) {
       throw new Error("답변을 불러오지 못했습니다.");
     }
+
     const data = await response.json();
 
     emptyState.classList.add("hidden");
@@ -254,8 +257,7 @@ document.getElementById("preset-questions").addEventListener("click", (event) =>
   if (!(target instanceof HTMLButtonElement)) {
     return;
   }
-  const question = target.dataset.question || "";
-  questionInput.value = question;
+  questionInput.value = target.dataset.question || "";
   askQuestion();
 });
 
